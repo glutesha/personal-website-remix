@@ -1,0 +1,11 @@
+---
+const { href } = Astro.props;
+const { text } = Astro.props;
+---
+
+<a class="button" href={href}>
+    <slot />
+    <div class="flex items-center justify-center w-full">
+        <p class="text-[15px] lg:text-[20px]">{ text }</p>
+    </div>
+</a>

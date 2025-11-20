@@ -44,8 +44,12 @@
         @apply -translate-y-1.5;
     }
 
+    .button-icon {
+        @apply w-[40px] lg:w-[45px];
+    }
+
     .button{
-        @apply bg-neutral-700 flex flex-row gap-2 justify-center items-center px-5 py-3 rounded-3xl text-[20px] shadow-xl shadow-neutral-200/10 transition duration-300 ease-in-out;
+        @apply bg-neutral-700 flex flex-col lg:flex-row w-[85px] h-[85px] lg:w-[150px] lg:h-[50px] lg:pt-2 lg:pr-3 lg:gap-1 active:shadow-neutral-600 justify-center items-center lg:justify-normal px-2 py-2 rounded-2xl shadow-md shadow-neutral-200/10 transition duration-300 ease-in-out;
     }
     .button:hover{
         @apply -translate-y-1.5;
