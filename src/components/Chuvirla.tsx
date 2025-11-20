@@ -13,10 +13,10 @@ function Scene() {
     const modelRef = useRef<THREE.Object3D | null>(null);
     const headRef = useRef<THREE.Object3D | null>(null);
 
-    const target = useRef(new THREE.Vector3(0, camera.position.y, camera.position.z + 5));
+    const target = useRef(new THREE.Vector3(0, camera.position.y, camera.position.z + 3));
     const plane = useRef(new THREE.Plane());
     const mouse = useRef(new THREE.Vector2());
-    const intersection = useRef(new THREE.Vector3(0, 0, camera.position.z + 5));
+    const intersection = useRef(new THREE.Vector3(0, 0, camera.position.z + 3));
 
     useEffect(() => {
         const object = gltf.scene;
@@ -26,6 +26,7 @@ function Scene() {
         const center = box.getCenter(new THREE.Vector3());
 
         object.position.sub(center);
+        object.position.y += 0.1;
 
         headRef.current = object.getObjectByName("Bone003") || null;
     }, [gltf])
@@ -76,8 +77,8 @@ useGLTF.preload("/src/assets/gluten.glb");
 
 export const Chuvirla = () => {
     return (
-        <div className="aspect-square h-90 md:h-100 shrink-0" id="glutesha">
-            <Canvas camera={{ position: [0, -0.1, 3], fov: 40 }} style={{ background: "transparent" }}>
+        <div className="aspect-square h-90 md:h-100 shrink-0 -m-5" id="glutesha">
+            <Canvas className="bg-transparent" camera={{ position: [0, -0.1, 3.3], fov: 40 }}>
                 <hemisphereLight args={[0xffffff, 0x080820, 2]} position={[0, 3, 3]} />
                 <Scene />
             </Canvas>

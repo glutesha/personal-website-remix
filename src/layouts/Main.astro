@@ -1,12 +1,19 @@
 ---
 import '../styles/global.css';
+import favicon from '../assets/images/favicon.ico'
+import avatar from '../assets/images/avatar.png'
 ---
 <html lang="en">
     <head>
+        <title>glutesha</title>
+        <link rel="icon" type="image/x-icon" href={favicon} />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Glutesha"/>
+        <meta property="og:description" content="Software developer, electronics enthusiast."/>
+        <meta property="og:image" content={avatar.src} />
     </head>
-    <body>
+    <body class="bg-neutral-900 text-white">
         <slot />
     </body>
 </html>
