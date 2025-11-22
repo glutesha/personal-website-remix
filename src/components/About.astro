@@ -1,0 +1,12 @@
+---
+import Card from "../layouts/Card.astro";
+import { AboutText } from "./AboutText.tsx";
+
+// Icons
+import IdIcon from '../assets/images/vector/id.svg'
+---
+
+<Card id="about" title="About" additional_class="w-[405px] md:basis-120">
+    <IdIcon class="card-header-icon" slot="icon"/>
+    <AboutText slot="content"/>
+</Card>

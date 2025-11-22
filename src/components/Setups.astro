@@ -1,0 +1,114 @@
+---
+// Icons
+import TerminalIcon from '../assets/images/vector/terminal.svg'
+
+// Layouts
+import Card from "../layouts/Card.astro";
+---
+
+<Card id="neofetch" title="PC" additional_class="md:basis-127">
+    <TerminalIcon class="card-header-icon" slot="icon"/>
+    <div class="flex flex-col" slot="content">
+        <div class="flex flex-col items-center md:flex-row gap-1">
+            <div class="terminal">
+            <pre class="whitespace-pre font-mono text-[10.5px] md:text-sm">
+<span style="color:teal;"></span><span style="font-weight:bold;color:teal;">           </span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:gray;">.</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">-------------------------:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">          .</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+=</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">========================.
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">         :</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">===</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++===</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">===============-       :</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">-
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">        :</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">*++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">====</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+++++==</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">===========-        .==:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">       -</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">*+++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">=====</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+***++=</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">=========:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">      =</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">*++++=</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">=======------------:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">     =</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">*+++++=</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">====-                     </span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:dimgray;">...</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">   .</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+*+++++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">=-===:                    .</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">=+++=</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">  :</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">=====-==:                     -***</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">**</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">+
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;"> :</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++=</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">=======-=.                      .=+**+</span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:dimgray;">.</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">.</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">==========-.                          </span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:dimgray;">.</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;"> :</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+++++++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">====-                                </span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:dimgray;">.</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">--==-</span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:dimgray;">.</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">  :</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">==========.                             </span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:dimgray;">:</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+++++++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:dimgray;">:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">   .-===========.                            =*****+*+
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">    .-===========:                           .+*****+:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">      -=======</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">:::::::::::::::::::::::::-:  </span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:dimgray;">.</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">---:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">       :======</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">====</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+++******************=.
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">        :=====</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">==========</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++++++++++++++*-
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">         .====</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">==============</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">++++++++++*-
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">          .===</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">==================</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+++++++:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">           .-=======================</span><span style="color:green;"></span><span style="font-weight:bold;color:green;">+++:
+</span><span style="color:teal;"></span><span style="font-weight:bold;color:teal;">             </span><span style="font-weight:bold;filter: contrast(70%) brightness(100%);color:dimgray;">..........................</span>
+</pre>
+            <pre class="pt-5 whitespace-pre font-mono text-[12.5px] md:text-[16.5px]">
+<span style="font-weight:bold;color:green;">glutesha</span>@<span style="color:green;"></span><span style="font-weight:bold;color:green;">glutesha-desktop</span>
+-------------------------
+<span style="font-weight:bold;">OS</span>: CachyOS x86_64
+<span style="font-weight:bold;">Host</span>: Gigabyte Technology Co., Ltd. H510M H
+<span style="font-weight:bold;">Kernel</span>: 6.16.3-2-cachyos
+<span style="font-weight:bold;">Uptime</span>: 2 days, 23 hours, 6 mins
+<span style="font-weight:bold;">Packages</span>: 1507 (pacman), 15 (flatpak)
+<span style="font-weight:bold;">Shell</span>: fish 4.0.2
+<span style="font-weight:bold;">Resolution</span>: 1920x1080, 1680x1050, 1280x720
+<span style="font-weight:bold;">DE</span>: GNOME 48.4 (Wayland)
+<span style="font-weight:bold;">WM</span>: Mutter
+<span style="font-weight:bold;">WM Theme</span>: Adwaita
+<span style="font-weight:bold;">Theme</span>: Adwaita [GTK2/3]
+<span style="font-weight:bold;">Icons</span>: Adwaita [GTK2/3]
+<span style="font-weight:bold;">Terminal</span>: kgx
+<span style="font-weight:bold;">CPU</span>: Intel i5-10400 (12) @ 4.300GHz
+<span style="font-weight:bold;">GPU</span>: NVIDIA GeForce RTX 3060 Lite Hash Rate
+<span style="font-weight:bold;">Memory</span>: 18651MiB / 31950MiB
+
+<span style="color:dimgray;"></span><span style="color:dimgray;background-color:black;">   </span><span style="color:red;background-color:black;"></span><span style="color:red;background-color:red;">   </span><span style="color:green;background-color:red;"></span><span style="color:green;background-color:green;">   </span><span style="color:olive;background-color:green;"></span><span style="color:olive;background-color:olive;">   </span><span style="color:blue;background-color:olive;"></span><span style="color:blue;background-color:blue;">   </span><span style="color:purple;background-color:blue;"></span><span style="color:purple;background-color:purple;">   </span><span style="color:teal;background-color:purple;"></span><span style="color:teal;background-color:teal;">   </span><span style="color:gray;background-color:teal;"></span><span style="color:gray;background-color:gray;">   </span>
+<span style="filter: contrast(70%) brightness(100%);color:dimgray;"></span><span style="filter: contrast(70%) brightness(100%);color:dimgray;background-color:black;">   </span><span style="filter: contrast(70%) brightness(100%);color:red;background-color:black;"></span><span style="filter: contrast(70%) brightness(100%);color:red;background-color:red;">   </span><span style="filter: contrast(70%) brightness(100%);color:green;background-color:red;"></span><span style="filter: contrast(70%) brightness(100%);color:green;background-color:green;">   </span><span style="filter: contrast(70%) brightness(100%);color:olive;background-color:green;"></span><span style="filter: contrast(70%) brightness(100%);color:olive;background-color:olive;">   </span><span style="filter: contrast(70%) brightness(100%);color:blue;background-color:olive;"></span><span style="filter: contrast(70%) brightness(100%);color:blue;background-color:blue;">   </span><span style="filter: contrast(70%) brightness(100%);color:purple;background-color:blue;"></span><span style="filter: contrast(70%) brightness(100%);color:purple;background-color:purple;">   </span><span style="filter: contrast(70%) brightness(100%);color:teal;background-color:purple;"></span><span style="filter: contrast(70%) brightness(100%);color:teal;background-color:teal;">   </span><span style="filter: contrast(70%) brightness(100%);color:gray;background-color:teal;"></span><span style="filter: contrast(70%) brightness(100%);color:gray;background-color:gray;">   </span>
+</pre>
+            </div>
+    </div>
+    </div>
+</Card>
+<Card id="neofetch" title="Macbook" additional_class="md:basis-10">
+    <TerminalIcon class="card-header-icon" slot="icon"/>
+    <div class="flex flex-col" slot="content">
+        <div class="flex flex-col items-center md:flex-row gap-1">
+            <div class="terminal">
+            <pre class="whitespace-pre font-mono text-[14px] md:text-[17px]" style="tab-size: 0;">
+<span style="color:green;"></span><span style="font-weight:bold;color:green;">                    'c.
+                 ,xNMM.
+               .OMMMMo
+               OMMM0,
+     .;loddo:' loolloddol;.
+   cKMMMMMMMMMMNWMMMMMMMMMM0:
+</span><span style="color:olive;"></span><span style="font-weight:bold;color:olive;"> .KMMMMMMMMMMMMMMMMMMMMMMMWd.
+ XMMMMMMMMMMMMMMMMMMMMMMMX.
+</span><span style="color:red;"></span><span style="font-weight:bold;color:red;">;MMMMMMMMMMMMMMMMMMMMMMMM:
+:MMMMMMMMMMMMMMMMMMMMMMMM:
+</span><span style="color:red;"></span><span style="font-weight:bold;color:red;">.MMMMMMMMMMMMMMMMMMMMMMMMX.
+ kMMMMMMMMMMMMMMMMMMMMMMMMWd.
+ </span><span style="color:purple;"></span><span style="font-weight:bold;color:purple;">.XMMMMMMMMMMMMMMMMMMMMMMMMMMk
+  .XMMMMMMMMMMMMMMMMMMMMMMMMK.
+    </span><span style="color:blue;"></span><span style="font-weight:bold;color:blue;">kMMMMMMMMMMMMMMMMMMMMMMd
+     ;KMMMMMMMWXXWMMMMMMMk.
+       .cooc,.    .,coo:.</span>
+
+</pre>
+
+                <pre class="whitespace-pre font-mono text-[12.5px] md:text-[18.5px]" style="tab-size: 0;">
+<span style="font-weight:bold;"></span><span style="font-weight:bold;color:green;">glutesha</span>@<span style="color:green;"></span><span style="font-weight:bold;color:green;">glutesha-laptop.local</span>
+------------------------------
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">OS</span>: macOS 15.6.1 24G90 arm64
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">Host</span>: Mac15,12
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">Kernel</span>: 24.6.0
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">Uptime</span>: 1 day, 1 hour, 47 mins
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">Packages</span>: 89 (brew)
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">Shell</span>: zsh 5.9
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">Resolution</span>: 1470x956
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">DE</span>: Aqua
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">WM</span>: Quartz Compositor
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">WM Theme</span>: Graphite (Dark)
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">Terminal</span>: WarpTerminal
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">CPU</span>: Apple M3
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">GPU</span>: Apple M3
+<span style="color:olive;"></span><span style="font-weight:bold;color:olive;">Memory</span>: 2434MiB / 16384MiB
+
+<span style="color:dimgray;"></span><span style="color:dimgray;background-color:black;">   </span><span style="color:red;background-color:black;"></span><span style="color:red;background-color:red;">   </span><span style="color:green;background-color:red;"></span><span style="color:green;background-color:green;">   </span><span style="color:olive;background-color:green;"></span><span style="color:olive;background-color:olive;">   </span><span style="color:blue;background-color:olive;"></span><span style="color:blue;background-color:blue;">   </span><span style="color:purple;background-color:blue;"></span><span style="color:purple;background-color:purple;">   </span><span style="color:teal;background-color:purple;"></span><span style="color:teal;background-color:teal;">   </span><span style="color:gray;background-color:teal;"></span><span style="color:gray;background-color:gray;">   </span>
+<span style="filter: contrast(70%) brightness(100%);color:dimgray;"></span><span style="filter: contrast(70%) brightness(100%);color:dimgray;background-color:black;">   </span><span style="filter: contrast(70%) brightness(100%);color:red;background-color:black;"></span><span style="filter: contrast(70%) brightness(100%);color:red;background-color:red;">   </span><span style="filter: contrast(70%) brightness(100%);color:green;background-color:red;"></span><span style="filter: contrast(70%) brightness(100%);color:green;background-color:green;">   </span><span style="filter: contrast(70%) brightness(100%);color:olive;background-color:green;"></span><span style="filter: contrast(70%) brightness(100%);color:olive;background-color:olive;">   </span><span style="filter: contrast(70%) brightness(100%);color:blue;background-color:olive;"></span><span style="filter: contrast(70%) brightness(100%);color:blue;background-color:blue;">   </span><span style="filter: contrast(70%) brightness(100%);color:purple;background-color:blue;"></span><span style="filter: contrast(70%) brightness(100%);color:purple;background-color:purple;">   </span><span style="filter: contrast(70%) brightness(100%);color:teal;background-color:purple;"></span><span style="filter: contrast(70%) brightness(100%);color:teal;background-color:teal;">   </span><span style="filter: contrast(70%) brightness(100%);color:gray;background-color:teal;"></span><span style="filter: contrast(70%) brightness(100%);color:gray;background-color:gray;">   </span></pre>
+            </div>
+        </div>
+    </div>
+</Card>

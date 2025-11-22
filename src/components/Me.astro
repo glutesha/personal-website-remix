@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+
+// Layout
+import Polaroid from '../layouts/Polaroid.astro';
+
+// Images
+import me from '../assets/images/me.png';
+---
+
+<Polaroid label="My pic">
+    <Image loading="eager" class="max-w-[340px] md:w-[150px] lg:w-[210px] aspect-fixed pt-2" src={me} alt="My Pic" />
+</Polaroid>

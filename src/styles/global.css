@@ -11,26 +11,39 @@
 
 @layer components {
     .polaroid {
-        @apply flex flex-col max-w-md justify-center p-5 mt-5 md:max-h-55 lg:max-h-70 gap-2 items-center font-serif text-3xl text-center text-white bg-neutral-900 shadow-md shadow-black/50 transition duration-300 ease-in-out;
+        @apply flex flex-col w-102 md:max-w-[180px] lg:max-w-[240px] justify-center p-5 md:max-h-55 lg:max-h-70 gap-2 items-center font-serif text-3xl text-center text-white bg-neutral-900 shadow-md shadow-black/50 transition duration-300 ease-in-out;
     }
     .polaroid:hover {
         @apply -translate-y-1.5 shadow-xl md:scale-120;
     }
 
+    .terminal {
+        @apply bg-black p-4 rounded-2xl mt-2;
+    }
+
     .card {
-        @apply bg-neutral-950 p-3 rounded-2xl shadow-md shadow-black/50 overflow-clip transition duration-300;
+        @apply bg-neutral-950 p-3 rounded-2xl shadow-md shadow-black/50 overflow-clip transition duration-300 w-102 md:max-w-full;
     }
     .card:hover{
         @apply -translate-y-1.5 shadow-xl;
     }
     .card-header {
-        @apply bg-neutral-900 -mt-4  -mx-4 pt-1 mb-1 h-[40px] flex flex-row items-center justify-center gap-1 font-bold text-[15px];
+        @apply bg-neutral-900 -mt-3.5 -mx-4 pt-1 mb-1 h-[40px] flex flex-row items-center justify-center gap-1 font-bold text-[20px];
     }
     .card-header-icon {
-        @apply w-[25px];
+        @apply w-[30px];
     }
 
     #about:target {
+        @apply animate-highlight;
+    }
+    #contact:target {
+        @apply animate-highlight;
+    }
+    #statistics:target {
+        @apply animate-highlight;
+    }
+    #neofetch:target {
         @apply animate-highlight;
     }
 
@@ -44,15 +57,8 @@
         @apply -translate-y-0.5;
     }
 
-    .stats {
-        @apply shadow-xl shadow-black/50 transition duration-300 ease-in-out;
-    }
-    .stats:hover{
-        @apply shadow-black/70 -translate-y-1.5;
-    }
-
     .link{
-        @apply bg-neutral-500/20 w-full md:w-22.5 flex-1 md:flex-none aspect-square flex items-center justify-center rounded-2xl shadow-xl shadow-black/50 transition duration-300 ease-in-out;
+        @apply bg-neutral-500/20 w-22.5 flex-1 md:flex-none aspect-square flex items-center justify-center rounded-2xl shadow-md shadow-black/50 transition duration-300 ease-in-out;
     }
     .link:hover{
         @apply shadow-cyan-400/30 -translate-y-1.5;
@@ -80,13 +86,6 @@
     }
     .button:active{
         @apply -translate-y-0.5 bg-neutral-500/20;
-    }
-
-    .technology{
-        @apply bg-neutral-500/20 w-full md:w-20 flex-1 md:flex-none aspect-square flex items-center justify-center rounded-2xl shadow-xl shadow-black/50 transition duration-300 ease-in-out cursor-not-allowed;
-    }
-    .technology:hover{
-        @apply shadow-neutral-700/50 -translate-y-0.5;
     }
 
     .pixel{

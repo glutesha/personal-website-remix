@@ -8,9 +8,9 @@ if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
     age--;
 }
 
-export const About = () => {
+export const AboutText = () => {
     return (
-        <p className="text-xl">
+        <p className="text-2xl">
             I am a russian {age} y.o. teenager currently studying in high school.
             Interested in <text className="text-orange-400">web</text> and <text className="text-orange-400">embedded</text>.
             Also interested in DJing and audio visuals.

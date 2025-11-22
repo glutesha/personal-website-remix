@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+// Icons
+import ArrowIcon from '../assets/images/vector/arrow.svg'
+
+// Layouts
+import Card from "../layouts/Card.astro";
+---
+
+<Card id="statistics" title="Stats" additional_class="md:basis-130">
+    <ArrowIcon class="card-header-icon" slot="icon"/>
+    <div class="flex flex-col gap-3 pt-2 w-" slot="content">
+        <Image loading="eager" width="495" height="190" alt="hackatime" src="https://github-readme-stats.hackclub.dev/api/wakatime?username=3879&api_domain=hackatime.hackclub.com&&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8&theme=dark" />
+        <Image loading="eager" width="495" height="190" alt="github" src="https://github-readme-stats.vercel.app/api?username=glutesha&show_icons=true&theme=dark" />
+    </div>
+</Card>
