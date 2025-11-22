@@ -3,10 +3,13 @@ import { Image } from 'astro:assets';
 
 import Main from '../layouts/Main.astro';
 import MenuButton from '../layouts/MenuButton.astro';
+import Card from '../layouts/Card.astro';
+import Polaroid from '../layouts/Polaroid.astro';
 
 import { Chuvirla } from '../components/Chuvirla';
 import { About } from '../components/About';
 
+import me from '../assets/images/me.png';
 import frame from '../assets/images/frame.png';
 import logo from '../assets/images/logo.png';
 
@@ -43,13 +46,13 @@ import ArrowIcon from '../assets/images/vector/arrow.svg'
         </div>
         <p class="text-center text-3xl font-bold md:hidden pt-8 pb-10 animate-bounce">⌄</p>
     </div>
-    <div class="flex flex-col md:flex-row px-5 py-5">
-        <div id="about" class="card md:basis-120">
-            <div class="card-header">
-                <IdIcon class="card-header-icon" />
-                <p>About</p>
-            </div>
-            <About server:defer/>
-        </div>
+    <div class="flex flex-col items-center md:flex-row md:flex-wrap px-5 py-5 md:gap-5">
+        <Card id="about" title="About" additional_class="md:basis-120">
+            <IdIcon class="card-header-icon" slot="icon"/>
+            <About server:defer slot="content"/>
+        </Card>
+        <Polaroid label="My pic">
+            <Image class="max-w-[340px] md:w-[150px] lg:w-[210px] aspect-square pt-2" src={me} alt="My Pic" />
+        </Polaroid>
     </div>
 </Main>
