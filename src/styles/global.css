@@ -10,6 +10,18 @@
 }
 
 @layer components {
+    .card {
+        @apply bg-neutral-950 p-3 rounded-2xl shadow-md shadow-black/50 overflow-clip;
+    }
+
+    .card-header {
+        @apply bg-neutral-900 -mt-4  -mx-4 pt-1 mb-1 h-[40px] flex flex-row items-center justify-center gap-1 font-bold text-[15px];
+    }
+
+    .card-header-icon {
+        @apply w-[25px];
+    }
+
     .badge {
         @apply transition duration-300;
     }
@@ -49,7 +61,7 @@
     }
 
     .button{
-        @apply bg-neutral-700 flex flex-col lg:flex-row w-[85px] h-[85px] lg:w-[150px] lg:h-[50px] lg:pt-2 lg:pr-3 lg:gap-1 active:shadow-neutral-600 justify-center items-center lg:justify-normal px-2 py-2 rounded-2xl shadow-md shadow-neutral-200/10 transition duration-300 ease-in-out;
+        @apply bg-neutral-700 outline-2 outline-neutral-500 text-neutral-200 flex flex-col lg:flex-row w-[85px] h-[85px] lg:w-[150px] lg:h-[50px] lg:pt-2 lg:pr-3 lg:gap-1 active:shadow-neutral-400 justify-center items-center lg:justify-normal px-2 py-2 rounded-2xl shadow-md shadow-neutral-600    transition duration-300 ease-in-out;
     }
     .button:hover{
         @apply -translate-y-1.5;
@@ -68,6 +80,8 @@
         @apply min-w-30;
     }
 }
+
 @theme {
+    --color-canvas: #202020;
     --font-mona-sans: 'Mona Sans', sans-serif;
 }

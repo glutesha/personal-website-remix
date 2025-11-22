@@ -1,0 +1,20 @@
+const today = new Date();
+const birthDate = new Date("2008-09-25"); // Now you know when to wish me a happy birthday :3
+
+let age = today.getFullYear() - birthDate.getFullYear();
+const m = today.getMonth() - birthDate.getMonth();
+
+if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+}
+
+export const About = () => {
+    return (
+        <p className="text-xl">
+            I am a russian {age} y.o. teenager currently studying in high school.
+            Interested in <text className="text-orange-400">web</text> and <text className="text-orange-400">embedded</text>.
+            Also interested in DJing and audio visuals.
+            Fun fact: This website is accessible via <a className="text-cyan-400" href="https://glutesha.fckn.rocks">glutesha.fckn.rocks</a>!
+        </p>
+    );
+}

@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import favicon from '../assets/images/favicon.ico'
 import avatar from '../assets/images/avatar.png'
+import background from '../assets/images/background.png';
 ---
 <html lang="en">
     <head>
@@ -13,7 +14,7 @@ import avatar from '../assets/images/avatar.png'
         <meta property="og:description" content="Software developer, electronics enthusiast."/>
         <meta property="og:image" content={avatar.src} />
     </head>
-    <body class="bg-neutral-900 text-white">
+    <body class="bg-canvas text-white" style={`background-image: url(${background.src}); background-attachment: fixed; background-size: 100%`}>
         <slot />
     </body>
 </html>
