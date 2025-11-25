@@ -18,7 +18,7 @@
     }
 
     .terminal {
-        @apply bg-black p-4 rounded-2xl mt-2;
+        @apply bg-black p-4 rounded-2xl mt-2 justify-center;
     }
 
     .card {
@@ -51,7 +51,7 @@
         @apply transition duration-300;
     }
     .badge:hover {
-        @apply -translate-y-1.5 scale-150 shadow-xl shadow-black/50;
+        @apply -translate-y-1.5 scale-110 shadow-xl shadow-black/50;
     }
     .badge:active {
         @apply -translate-y-0.5;

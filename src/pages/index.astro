@@ -9,15 +9,17 @@ import Contact from '../components/Contact.astro';
 import Me from '../components/Me.astro'
 import Stats from '../components/Stats.astro'
 import Setups from '../components/Setups.astro'
+import Badges from '../components/Badges.astro'
 ---
 
 <Main>
     <Header />
-    <div class="flex flex-col md:flex-row items-center md:flex-wrap md:px-5 py-5 gap-2">
+    <div class="flex flex-col md:grid md:grid-cols-4 items-center md:flex-wrap md:px-5 py-5 gap-2">
         <About server:defer slot="content"/>
         <Contact/>
         <Me />
         <Stats/>
         <Setups />
+        <Badges />
     </div>
 </Main>
