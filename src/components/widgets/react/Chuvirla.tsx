@@ -77,7 +77,7 @@ useGLTF.preload("/src/assets/gluten.glb");
 
 export const Chuvirla = () => {
     return (
-        <div className="aspect-square h-100 md:h-110 shrink-0 -m-5" id="glutesha">
+        <div className="aspect-square h-100 mdx:h-110 shrink-0 -m-5" id="glutesha">
             <Canvas className="bg-transparent" camera={{ position: [0, -0.1, 3.3], fov: 40 }}>
                 <hemisphereLight args={[0xffffff, 0x080820, 2]} position={[0, 3, 3]} />
                 <Scene />
