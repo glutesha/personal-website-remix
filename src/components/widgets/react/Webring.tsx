@@ -20,15 +20,17 @@ export const Webring = () => {
             });
 
         const onScroll = () => {
-            setScrolled(window.scrollY > 20);
+            const scrollTop = window.scrollY;           // вместо pageYOffset
+            setScrolled(scrollTop > 20);
 
-            const isAtBottom =
-                window.innerHeight + window.scrollY >= document.body.offsetHeight;
+            const scrollHeight = document.documentElement.scrollHeight;
+            const clientHeight = window.innerHeight;
 
+            const isAtBottom = scrollTop + clientHeight >= scrollHeight - 20;
             setAtBottom(isAtBottom);
         };
 
-        window.addEventListener("scroll", onScroll);
+        window.addEventListener("scroll", onScroll, { passive: true });
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 

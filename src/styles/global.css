@@ -16,7 +16,7 @@
         bg-neutral-900 shadow-md shadow-black/50 transition duration-300 ease-in-out;
     }
     .polaroid:hover {
-        @apply -translate-y-1.5 shadow-xl mdx:scale-120;
+        @apply z-10 -translate-y-1.5 shadow-xl mdx:scale-150;
     }
 
     .terminal {
@@ -55,7 +55,7 @@
         @apply aspect-88/31 w-30.5 mdx:w-29 transition duration-300;
     }
     .badge:hover {
-        @apply -translate-y-1.5 scale-200 shadow-xl shadow-black/50;
+        @apply z-10 -translate-y-1.5 scale-200 shadow-xl shadow-black/50;
     }
     .badge:active {
         @apply -translate-y-0.5;
@@ -84,7 +84,7 @@
 
     .button{
         @apply bg-neutral-700 outline-2 outline-neutral-500 text-neutral-200 flex flex-col
-        lgx:flex-row w-[85px] h-[85px] lgx:w-[150px] lgx:h-[50px] lgx:pt-2 lgx:pr-3 lgx:gap-1
+        lgx:flex-row w-[80px] h-[80px] lgx:w-[150px] lgx:h-[50px] lgx:pt-2 lgx:pr-3 lgx:gap-1
         active:shadow-neutral-400 justify-center items-center lgx:justify-normal px-2 py-2 rounded-2xl
         shadow-md shadow-neutral-600  transition duration-100 ease-in-out;
     }
@@ -115,6 +115,8 @@
 
     --breakpoint-lgx: 1100px;
     --breakpoint-mdx: 860px;
+    --text-abt: 26.5px;
+    --text-abt--line-height: calc(2 / 1.64);
     --color-canvas: #202020;
     --color-webring: #172554;
     --font-mona-sans: 'Mona Sans', sans-serif;
