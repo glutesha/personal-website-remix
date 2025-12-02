@@ -1,17 +1,17 @@
 ---
 import {Image} from "astro:assets";
-import NavigationButton from "./NavigationButton.astro";
-import {Chuvirla} from "./Chuvirla";
+import NavigationButton from "../parts/NavigationButton.astro";
+import {Chuvirla} from "./react/Chuvirla";
 
 // Images
-import frame from '../assets/images/frame.png';
-import logo from '../assets/images/logo.png';
+import frame from '../../assets/images/frame.png';
+import logo from '../../assets/images/logo.png';
 
 // Icons
-import IdIcon from '../assets/images/vector/id.svg'
-import SpeechBubbleIcon from '../assets/images/vector/speechbubble.svg'
-import TerminalIcon from '../assets/images/vector/terminal.svg'
-import ArrowIcon from '../assets/images/vector/arrow.svg'
+import IdIcon from '../../assets/images/vector/id.svg'
+import SpeechBubbleIcon from '../../assets/images/vector/speechbubble.svg'
+import TerminalIcon from '../../assets/images/vector/terminal.svg'
+import ArrowIcon from '../../assets/images/vector/arrow.svg'
 ---
 
 <div class="bg-neutral-950 flex flex-col jusify-center items-center shadow-xl shadow-black/25 md:pb-10">
@@ -22,7 +22,7 @@ import ArrowIcon from '../assets/images/vector/arrow.svg'
         <div class="pt-5 md:flex-col gap-2 justify-center items-center text-center md:text-start">
             <Image loading="eager" class="w-sm lg:w-2xl" src={logo} alt="Glutesha" />
             <p class="md:ms-1 font-mono text-[19px] lg:text-[33px]">Goober, geek, tech obsessed freak</p>
-            <div class="flex flex-row flex-wrap font-mono font-bold justify-center md:justify-normal items-center md:items-begin gap-3 md:gap-5 pb-5 rounded-2xl pt-3 md:w-full">
+            <div class="flex flex-row flex-wrap font-mono font-bold justify-center md:justify-normal items-center md:items-begin gap-3 lg:gap-5 pb-5 rounded-2xl pt-3 md:w-full">
                 <NavigationButton href="#about" text="About">
                     <IdIcon class="button-icon" />
                 </NavigationButton>

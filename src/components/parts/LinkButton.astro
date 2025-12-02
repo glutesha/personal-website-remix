@@ -1,0 +1,10 @@
+---
+const { href } = Astro.props;
+---
+
+<a class="tile-button hover:shadow-cyan-400/30 
+            active:shadow-cyan-400/50 active:-translate-y-0.5 
+            active:bg-neutral-500/10" 
+            href={href} target="_blank" rel="noopener noreferrer">
+    <slot />
+</a>

@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+// Layouts
+import Card from '../../layouts/Card.astro';
+
+// Icons
+import Diamond from '../../assets/images/vector/diamond.svg'
+
+const staticBadges = Object.values(
+    import.meta.glob('/public/badges/*.{png,jpg,gif}', {eager: true, as: "url"})
+);
+
+const interactiveBadges = [
+    {
+        href: "https://otomir23.me/",
+        src: "https://otomir23.me/88x31.png",
+        alt: "otomir23"
+    },
+    {
+        href: "https://milkcool.ru",
+        src: "/badges/interactive/lily.png",
+        alt: "milkcool"
+    },
+    {
+        href: "https://fckn.rocks",
+        src: "https://fckn.rocks/fcknrocks.png",
+        alt: "fcknrocks"
+    },
+    {
+        href: "https://veselcraft.ru/",
+        src: "https://veselcraft.ru/images/vc.gif",
+        alt: "veselcraft"
+    },
+    {
+        href: "https://smokepowered.com/",
+        src: "/badges/interactive/smoke.gif",
+        alt: "smokepowered"
+    },
+    {
+        href: "https://www.youtube.com/user/LinusTechTips",
+        src: "/badges/interactive/ltt.gif",
+        alt: "freetechtips"
+    },
+    {
+        href: "https://asyasocute.online/",
+        src: "https://asyasocute.online/badges/cowl.png",
+        alt: "asya"
+    },
+    {
+        href: "https://egroish.net/kitty.html",
+        src: "https://egroish.net/images/kitty_badge.png",
+        alt: "Kitty Badge"
+    },
+    {
+        href: "https://egroish.net/",
+        src: "https://egroish.net/images/EgroishBadge.gif",
+        alt: "Egroish Badge"
+    },
+    {
+        href: "https://yesterweb.org/no-to-web3/",
+        src: "https://lostletters.neocities.org/graphics/linkout/nft_sadgrl.gif",
+        alt: "No to Web3"
+    },
+    {
+        href: "https://flipper.net",
+        src: "/badges/interactive/flipper.gif",
+        alt: "flipper"
+    }
+];
+---
+
+
+<Card title="Favorite Badges">
+    <Diamond class="card-header-icon" slot="icon"/>
+    <div class="pt-2 grid grid-cols-3 -mr-5" style="image-rendering: pixelated;" slot="content">
+        {interactiveBadges.map((b) => (
+                <a href={b.href} target="_blank" rel="noopener noreferrer">
+                    <img width="88" height="33" loading="lazy" class="badge" src={b.src} alt={b.alt} />
+                </a>
+        ))}
+
+        {staticBadges.map((src) => (
+                <img width="88" height="33" loading="lazy" class="badge" src={src} alt="badge" />
+        ))}
+    </div>
+</Card>
