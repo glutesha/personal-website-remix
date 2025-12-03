@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useState } from "react";
+import {Suspense, useState} from "react";
 import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { useEffect, useRef } from 'react';
@@ -7,7 +7,7 @@ import type { GLTF } from "three-stdlib";
 
 import avatar_transparent from "../../../assets/images/avatar_transparent.png";
 
-function Scene({ onLoad }: { onLoad: () => void }) {
+function Scene() {
     const gltf = useGLTF('/src/assets/gluten.glb') as GLTF;
     const { camera, raycaster, gl } = useThree();
 
@@ -73,27 +73,25 @@ function Scene({ onLoad }: { onLoad: () => void }) {
         headRef.current.lookAt(target.current);
     });
 
-    useEffect(() => {
-        onLoad();
-    }, [onLoad]);
-
     return <primitive object={gltf.scene} />;
 }
 
 useGLTF.preload("/src/assets/gluten.glb");
 
+const Placeholder = () => {
+    return (
+        <img src={avatar_transparent.src} width="300" height="300" alt="placeholder"/>
+    );
+}
 export const Chuvirla = () => {
-    const [loaded, setLoaded] = useState(false);
-
     return (
         <div className="flex justify-center items-center aspect-square h-100 mdx:h-110 shrink-0 -m-5" id="glutesha">
-            {!loaded && (
-                <img src={avatar_transparent.src} width="300" height="300" alt="placeholder"/>
-            )}
-            <Canvas className={loaded ? "bg-transparent" : "collapse"} camera={{ position: [0, -0.1, 3.3], fov: 40 }}>
-                <hemisphereLight args={[0xffffff, 0x080820, 2]} position={[0, 3, 3]} />
-                <Scene onLoad={() => setLoaded(true)} />
-            </Canvas>
+            <Suspense fallback={<Placeholder />}>
+                <Canvas camera={{ position: [0, -0.1, 3.3], fov: 40 }}>
+                    <hemisphereLight args={[0xffffff, 0x080820, 2]} position={[0, 3, 3]} />
+                        <Scene/>
+                </Canvas>
+            </Suspense>
         </div>
     );
 }
