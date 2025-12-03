@@ -113,7 +113,7 @@
         }
     }
 
-    --breakpoint-lgx: 1100px;
+    --breakpoint-lgx: 1256px;
     --breakpoint-mdx: 860px;
     --text-abt: 26.5px;
     --text-abt--line-height: calc(2 / 1.64);
