@@ -70,9 +70,9 @@ const interactiveBadges = [
 ---
 
 
-<Card title="Favorite Badges" additional_class="mdx:basis-95">
+<Card title="Favorite Badges" additional_class="mdx:basis-95 lgx:basis-117">
     <Diamond class="card-header-icon" slot="icon"/>
-    <div class="pt-2 flex flex-wrap justify-center items-center" style="image-rendering: pixelated;" slot="content">
+    <div class="pt-2 flex flex-wrap justify-center items-center lgx:gap-1.5" style="image-rendering: pixelated;" slot="content">
         {interactiveBadges.map((b) => (
                 <a href={b.href} target="_blank" rel="noopener noreferrer">
                     <Image width={88} height={33} loading="lazy" class="badge" src={b.src} alt={b.alt} />

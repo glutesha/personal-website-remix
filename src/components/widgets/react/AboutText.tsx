@@ -8,7 +8,7 @@ const age = (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) ? y - 
 
 export const AboutText = () => {
     return (
-        <p className="text-abt px-0.5">
+        <p className="text-abt lgx:text-abtx px-0.5">
             I am a russian {age} y.o. teenager currently studying in high school.
             Interested in <text className="text-orange-400">web</text> and <text className="text-orange-400">embedded</text>.
             I love learning new things through practice and participating in hackathons and olympiads.

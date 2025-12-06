@@ -11,7 +11,7 @@
 
 @layer components {
     .polaroid {
-        @apply flex flex-col w-100 mdx:max-w-56 aspect-3/2 justify-center p-5
+        @apply flex flex-col w-100 mdx:max-w-56 aspect-3/2 justify-center p-5 lgx:max-w-65
         gap-2 items-center font-serif text-3xl text-center text-white
         bg-neutral-900 shadow-md shadow-black/50 transition duration-300 ease-in-out;
     }
@@ -20,7 +20,7 @@
     }
 
     .terminal {
-        @apply bg-black w-full outline-1 outline-neutral-800 flex flex-col p-1 rounded-2xl mt-2 justify-center lgx:flex-row;
+        @apply bg-black w-full outline-1 outline-neutral-800 flex flex-col p-1 rounded-2xl mt-2 justify-center lgx:items-center lgx:flex-row lgx:gap-10;
     }
 
     .card {
@@ -52,7 +52,7 @@
     }
 
     .badge {
-        @apply aspect-88/31 w-30.5 mdx:w-29 transition duration-300;
+        @apply aspect-88/31 w-30.5 mdx:w-29 lgx:w-35 transition duration-300;
     }
     .badge:hover {
         @apply z-10 -translate-y-1.5 scale-200 shadow-xl shadow-black/50;
@@ -62,7 +62,7 @@
     }
 
     .tile-button{
-        @apply bg-neutral-500/20 w-22.5 flex-1 mdx:flex-none aspect-square flex
+        @apply bg-neutral-500/20 w-22.5 lgx:w-28.5 flex-1 mdx:flex-none aspect-square flex
         items-center justify-center rounded-2xl shadow-md shadow-black/50
         transition duration-300 ease-in-out;
     }
@@ -115,9 +115,15 @@
 
     --breakpoint-lgx: 1256px;
     --breakpoint-mdx: 860px;
+
     --text-abt: 26.5px;
     --text-abt--line-height: calc(2 / 1.64);
+
+    --text-abtx: 31.5px;
+    --text-abtx--line-height: calc(2 / 1.69);
+
     --color-canvas: #202020;
     --color-webring: #172554;
+
     --font-mona-sans: 'Mona Sans', sans-serif;
 }
