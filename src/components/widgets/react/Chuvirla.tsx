@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { useEffect, useRef } from 'react';
@@ -7,8 +7,27 @@ import type { GLTF } from "three-stdlib";
 
 import avatar_transparent from "../../../assets/images/avatar_transparent.png";
 
+class ModelErrorBoundary extends React.Component<{ fallback: React.ReactNode }, { hasError: boolean }> {
+    state = { hasError: false };
+
+    static getDerivedStateFromError() {
+        return { hasError: true };
+    }
+
+    componentDidCatch(error: unknown) {
+        console.error("GLTF load error:", error);
+    }
+
+    render() {
+        if (this.state.hasError) {
+            return this.props.fallback;
+        }
+        return this.props.children;
+    }
+}
+
 function Scene() {
-    const gltf = useGLTF('/src/assets/gluten.glb') as GLTF;
+    const gltf = useGLTF('/gluten.glb') as GLTF;
     const { camera, raycaster, gl } = useThree();
 
     const container = gl.domElement.parentElement as HTMLElement;
@@ -86,12 +105,14 @@ const Placeholder = () => {
 export const Chuvirla = () => {
     return (
         <div className="flex justify-center items-center aspect-square h-100 mdx:h-110 shrink-0 -m-5" id="glutesha">
-            <Suspense fallback={<Placeholder />}>
-                <Canvas camera={{ position: [0, -0.1, 3.3], fov: 40 }}>
-                    <hemisphereLight args={[0xffffff, 0x080820, 2]} position={[0, 3, 3]} />
-                        <Scene/>
-                </Canvas>
-            </Suspense>
+            <ModelErrorBoundary fallback={<Placeholder />}>
+                <Suspense fallback={<Placeholder />}>
+                    <Canvas camera={{ position: [0, -0.1, 3.3], fov: 40 }}>
+                        <hemisphereLight args={[0xffffff, 0x080820, 2]} position={[0, 3, 3]} />
+                            <Scene/>
+                    </Canvas>
+                </Suspense>
+            </ModelErrorBoundary>
         </div>
     );
 }
