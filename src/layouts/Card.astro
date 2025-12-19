@@ -5,7 +5,7 @@ const { id, additional_class, title } = Astro.props;
 <div id={id} class={`card ${additional_class}`}>
     <div class="card-header">
         <slot name="icon" />
-        <p>{title}</p>
+        <p class="font-mona-sans">{title}</p>
     </div>
     <div class="px-1">
         <slot name="content"/>
