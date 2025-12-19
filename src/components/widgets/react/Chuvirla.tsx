@@ -95,7 +95,7 @@ function Scene() {
     return <primitive object={gltf.scene} />;
 }
 
-useGLTF.preload("/src/assets/gluten.glb");
+useGLTF.preload("/gluten.glb");
 
 const Placeholder = () => {
     return (

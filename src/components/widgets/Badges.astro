@@ -7,7 +7,7 @@ import Card from '../../layouts/Card.astro';
 import Diamond from '../../assets/images/vector/diamond.svg'
 
 const staticBadges = Object.values(
-    import.meta.glob('/public/badges/*.{png,jpg,gif}', {eager: true, as: "url"})
+    import.meta.glob('/badges/*.{png,jpg,gif}', {eager: true, as: "url"})
 );
 
 const interactiveBadges = [
