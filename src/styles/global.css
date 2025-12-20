@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'Mona Sans';
+    font-family: "Mona Sans";
     src:
-            url('../../public/Mona-Sans.woff2') format('woff2 supports variations'),
-            url('../../public/Mona-Sans.woff2') format('woff2-variations');
+        url("../../public/Mona-Sans.woff2") format("woff2 supports variations"),
+        url("../../public/Mona-Sans.woff2") format("woff2-variations");
     font-weight: 200 900;
     font-stretch: 75% 125%;
 }
@@ -27,15 +27,15 @@
         @apply bg-neutral-950 p-3 rounded-2xl shadow-md shadow-black/50
         transition duration-300 w-100 mdx:max-w-full;
     }
-    .card:hover{
+    .card:hover {
         @apply -translate-y-1.5 shadow-xl;
     }
     .card-header {
-        @apply -mt-3 mx-1 pt-1 h-[40px] flex flex-row
+        @apply -mt-3 mx-1 pt-1 h-10 flex flex-row
         items-center justify-start gap-1 font-bold text-[20px];
     }
     .card-header-icon {
-        @apply w-[20px] fill-neutral-200 mt-0.5;
+        @apply w-5 fill-neutral-200 mt-0.5;
     }
 
     #about:target {
@@ -65,55 +65,63 @@
         @apply -translate-y-0.5;
     }
 
-    .tile-button{
+    .tile-button {
         @apply bg-neutral-500/20 w-22.5 lgx:w-28.5 flex-1 mdx:flex-none aspect-square flex
         items-center justify-center rounded-2xl shadow-md shadow-black/50
         transition duration-300 ease-in-out;
     }
-    .tile-button:hover{
+    .tile-button:hover {
         @apply -translate-y-1.5;
     }
 
-    .tile{
+    .tile-linkpage-button {
+        @apply bg-neutral-500/20 w-22 lgx:w-20 flex-1 mdx:flex-none aspect-square flex
+        items-center justify-center rounded-2xl shadow-md shadow-black/50
+        transition duration-300 ease-in-out;
+    }
+    .tile-linkpage-button:hover {
+        @apply -translate-y-1.5;
+    }
+
+    .tile {
         @apply shadow-xl shadow-black/50 transition duration-300 ease-in-out
         relative aspect-square rounded-3xl bg-[#101010] overflow-hidden;
     }
-    .tile:hover{
+    .tile:hover {
         @apply -translate-y-1.5;
     }
 
     .button-icon {
-        @apply w-[40px] lgx:w-[45px] fill-neutral-200;
+        @apply w-10 lgx:w-[45px] fill-neutral-200;
     }
 
-    .button{
+    .button {
         @apply bg-neutral-700 outline-2 outline-neutral-500 text-neutral-200 flex flex-col
-        lgx:flex-row w-[80px] h-[80px] lgx:w-[150px] lgx:h-[50px] lgx:pt-2 lgx:pr-3 lgx:gap-1
+        lgx:flex-row w-20 h-20 lgx:w-[150px] lgx:h-[50px] lgx:pt-2 lgx:pr-3 lgx:gap-1
         active:shadow-neutral-400 justify-center items-center lgx:justify-normal px-2 py-2 rounded-2xl
         shadow-md shadow-neutral-600  transition duration-100 ease-in-out;
     }
-        .button:hover{
-            @apply -translate-y-1.5;
-        }
-    .button:active{
+    .button:hover {
+        @apply -translate-y-1.5;
+    }
+    .button:active {
         @apply -translate-y-0.5 bg-neutral-500/20;
     }
 }
 
 @theme {
-    --animate-highlight: highlight 1.5s ;
+    --animate-highlight: highlight 1.5s;
 
     @keyframes highlight {
         0% {
             box-shadow:
-                    0 10px 15px -3px rgba(0, 0, 0, 0.2),
-                    0 4px 6px -4px rgba(0, 0, 0, 0.1);
-
+                0 10px 15px -3px rgba(0, 0, 0, 0.2),
+                0 4px 6px -4px rgba(0, 0, 0, 0.1);
         }
         50% {
             box-shadow:
-                    0 10px 15px -3px rgba(255, 255, 255, 0.4),
-                    0 4px 6px -4px rgba(255, 255, 255, 0.5);
+                0 10px 15px -3px rgba(255, 255, 255, 0.4),
+                0 4px 6px -4px rgba(255, 255, 255, 0.5);
         }
     }
 
@@ -132,5 +140,5 @@
     --color-canvas: #202020;
     --color-webring: #172554;
 
-    --font-mona-sans: 'Mona Sans', sans-serif;
+    --font-mona-sans: "Mona Sans", sans-serif;
 }

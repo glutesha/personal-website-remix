@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+
+// Layouts
+import Page from "../layouts/Page.astro";
+
+// Components
+import { Chuvirla } from "../components/widgets/react/Chuvirla";
+import LinkPageButton from "../components/parts/LinkPageButton.astro";
+
+// Images
+import frame from "../assets/images/frame.png";
+import logo from "../assets/images/logo.png";
+
+// Icons
+import Bluesky from "../assets/images/vector/logos/bluesky.svg";
+import Discord from "../assets/images/vector/logos/discord.svg";
+import Github from "../assets/images/vector/logos/github.svg";
+import Reddit from "../assets/images/vector/logos/reddit.svg";
+import LastFM from "../assets/images/vector/logos/lastfm.svg";
+import Telegram from "../assets/images/vector/logos/telegram.svg";
+import Mail from "../assets/images/vector/logos/mail.svg";
+import Link from "../assets/images/vector/logos/link.svg";
+---
+
+<Page additional_class="flex flex-col h-screen items-center justify-center">
+    <div
+        class="bg-neutral-950 h-screen max-h-250 flex flex-col justify-center items-center shadow-xl shadow-black/25
+    mdx:flex-row mdx:pb-10 gap-2 mdx:gap-8 px-5 py-5 pt-18 mdx:pt-8 mdx:h-120"
+    >
+        <div
+            style={{ backgroundImage: `url(${frame.src})` }}
+            class="ring-1 ring-white shadow-xl shadow-neutral-100/20 rounded-full"
+        >
+            <Chuvirla client:load />
+        </div>
+        <div
+            class="mdx:pt-5 mdx:flex-col gap-2 justify-center items-center text-center mdx:text-start"
+        >
+            <Image
+                loading="eager"
+                class="w-[360px] lgx:w-2xl"
+                src={logo}
+                alt="Glutesha"
+            />
+            <p class="mdx:ms-1 font-mono text-[18px] lgx:text-[33px]">
+                Goober, geek, tech obsessed freak
+            </p>
+            <div
+                class="grid grid-cols-4 lgx:flex lgx:flex-row -m-0.5 justify-center items-center gap-1 pt-1.5"
+            >
+                <LinkPageButton href="https://t.me/glutesha"
+                    ><Telegram
+                        class="px-2 lgx:px-2.5 fill-cyan-400"
+                    /></LinkPageButton
+                >
+                <LinkPageButton href="https://github.com/glutesha"
+                    ><Github
+                        class="px-2 lgx:px-2.5 fill-cyan-400"
+                    /></LinkPageButton
+                >
+                <LinkPageButton href="https://www.last.fm/user/Glutesha"
+                    ><LastFM
+                        class="px-2.5 lgx:px-3 mr-0.5 mt-0.5 fill-cyan-400"
+                    /></LinkPageButton
+                >
+                <LinkPageButton
+                    href="https://bsky.app/profile/glutesha.pds.witchcraft.systems"
+                    ><Bluesky
+                        class="px-2 lgx:px-3 fill-cyan-400"
+                    /></LinkPageButton
+                >
+                <LinkPageButton href="https://www.reddit.com/user/GLUTESHA/"
+                    ><Reddit class="px-2 fill-cyan-400" /></LinkPageButton
+                >
+                <LinkPageButton href="https://discord.gg/r3q2z5QpZ8"
+                    ><Discord class="px-2 fill-cyan-400" /></LinkPageButton
+                >
+                <LinkPageButton href="mailto:mail@glutesha.me"
+                    ><Mail
+                        class="px-2 lgx:px-3 fill-cyan-400"
+                    /></LinkPageButton
+                >
+                <LinkPageButton href="/links"
+                    ><Link
+                        class="px-3.5 lgx:px-4.5 fill-cyan-400"
+                    /></LinkPageButton
+                >
+            </div>
+        </div>
+    </div>
+</Page>

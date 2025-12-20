@@ -3,29 +3,51 @@ import Card from "../../layouts/Card.astro";
 import LinkButton from "../parts/LinkButton.astro";
 
 // Icons
-import SpeechBubbleIcon from '../../assets/images/vector/speechbubble.svg'
+import SpeechBubbleIcon from "../../assets/images/vector/speechbubble.svg";
 
 // LinkButton Buttons
-import Bluesky from '../../assets/images/vector/logos/bluesky.svg'
-import Discord from '../../assets/images/vector/logos/discord.svg'
-import Github from '../../assets/images/vector/logos/github.svg'
-import Reddit from '../../assets/images/vector/logos/reddit.svg'
-import LastFM from '../../assets/images/vector/logos/lastfm.svg'
-import Telegram from '../../assets/images/vector/logos/telegram.svg'
-import Mail from '../../assets/images/vector/logos/mail.svg'
-import Link from '../../assets/images/vector/logos/link.svg'
+import Bluesky from "../../assets/images/vector/logos/bluesky.svg";
+import Discord from "../../assets/images/vector/logos/discord.svg";
+import Github from "../../assets/images/vector/logos/github.svg";
+import Reddit from "../../assets/images/vector/logos/reddit.svg";
+import LastFM from "../../assets/images/vector/logos/lastfm.svg";
+import Telegram from "../../assets/images/vector/logos/telegram.svg";
+import Mail from "../../assets/images/vector/logos/mail.svg";
+import Link from "../../assets/images/vector/logos/link.svg";
 ---
 
 <Card id="contact" title="Contact" additional_class="lgx:basis-128">
-    <SpeechBubbleIcon class="card-header-icon" slot="icon"/>
-    <div class="grid grid-cols-4 -m-0.5 justify-center items-center gap-2 pt-1.5" slot="content">
-        <LinkButton href="https://t.me/glutesha"><Telegram class="px-2 lgx:px-2.5 fill-cyan-400"/></LinkButton>
-        <LinkButton href="https://github.com/glutesha"><Github class="px-2 lgx:px-2.5 fill-cyan-400"/></LinkButton>
-        <LinkButton href="https://www.last.fm/user/Glutesha"><LastFM class="px-2.5 lgx:px-3 fill-cyan-400"/></LinkButton>
-        <LinkButton href="https://bsky.app/profile/glutesha.pds.witchcraft.systems"><Bluesky class="px-2 lgx:px-3 fill-cyan-400"/></LinkButton>
-        <LinkButton href="https://www.reddit.com/user/GLUTESHA/"><Reddit class="px-2 fill-cyan-400"/></LinkButton>
-        <LinkButton href="https://discord.gg/r3q2z5QpZ8"><Discord class="px-2 fill-cyan-400"/></LinkButton>
-        <LinkButton href="mailto:mail@glutesha.me"><Mail class="px-2 lgx:px-3 fill-cyan-400"/></LinkButton>
-        <LinkButton href="/links"><Link class="px-3.5 lgx:px-4.5 fill-cyan-400"/></LinkButton>
+    <SpeechBubbleIcon class="card-header-icon" slot="icon" />
+    <div
+        class="grid grid-cols-4 -m-0.5 justify-center items-center gap-2 pt-1.5"
+        slot="content"
+    >
+        <LinkButton href="https://t.me/glutesha"
+            ><Telegram class="px-2 lgx:px-2.5 fill-cyan-400" /></LinkButton
+        >
+        <LinkButton href="https://github.com/glutesha"
+            ><Github class="px-2 lgx:px-2.5 fill-cyan-400" /></LinkButton
+        >
+        <LinkButton href="https://www.last.fm/user/Glutesha"
+            ><LastFM
+                class="px-2.5 lgx:px-3 mr-0.5 mt-0.5 fill-cyan-400"
+            /></LinkButton
+        >
+        <LinkButton
+            href="https://bsky.app/profile/glutesha.pds.witchcraft.systems"
+            ><Bluesky class="px-2 lgx:px-3 fill-cyan-400" /></LinkButton
+        >
+        <LinkButton href="https://www.reddit.com/user/GLUTESHA/"
+            ><Reddit class="px-2 fill-cyan-400" /></LinkButton
+        >
+        <LinkButton href="https://discord.gg/r3q2z5QpZ8"
+            ><Discord class="px-2 fill-cyan-400" /></LinkButton
+        >
+        <LinkButton href="mailto:mail@glutesha.me"
+            ><Mail class="px-2 lgx:px-3 fill-cyan-400" /></LinkButton
+        >
+        <LinkButton href="/links"
+            ><Link class="px-3.5 lgx:px-4.5 fill-cyan-400" /></LinkButton
+        >
     </div>
 </Card>
