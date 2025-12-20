@@ -123,6 +123,9 @@
     --text-abt: 26.5px;
     --text-abt--line-height: calc(2 / 1.64);
 
+    --text-footer: 20px;
+    --text-footer--line-height: calc(2 / 1.5);
+
     --text-abtx: 35px;
     --text-abtx--line-height: calc(2 / 1.95);
 
