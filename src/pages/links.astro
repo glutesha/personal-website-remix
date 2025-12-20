@@ -20,13 +20,13 @@ import Reddit from "../assets/images/vector/logos/reddit.svg";
 import LastFM from "../assets/images/vector/logos/lastfm.svg";
 import Telegram from "../assets/images/vector/logos/telegram.svg";
 import Mail from "../assets/images/vector/logos/mail.svg";
-import Link from "../assets/images/vector/logos/link.svg";
+import Home from "../assets/images/vector/logos/home.svg";
 ---
 
 <Page additional_class="flex flex-col h-screen items-center justify-center">
     <div
         class="bg-neutral-950 h-screen max-h-250 flex flex-col justify-center items-center
-    mdx:flex-row mdx:pb-10 gap-2 mdx:gap-8 px-5 py-5 pt-18 mdx:pt-8 mdx:h-120"
+    mdx:flex-row mdx:pb-10 gap-2 mdx:gap-8 px-5 -mt-15 mdx:pt-8 mdx:h-120"
     >
         <div
             style={{ backgroundImage: `url(${frame.src})` }}
@@ -50,40 +50,32 @@ import Link from "../assets/images/vector/logos/link.svg";
                 class="grid grid-cols-4 lgx:flex lgx:flex-row -m-0.5 justify-center items-center gap-1 pt-1.5"
             >
                 <LinkPageButton href="https://t.me/glutesha"
-                    ><Telegram
-                        class="px-2 lgx:px-2.5 fill-cyan-400"
-                    /></LinkPageButton
+                    ><Telegram class="px-2 fill-neutral-100" /></LinkPageButton
                 >
                 <LinkPageButton href="https://github.com/glutesha"
-                    ><Github
-                        class="px-2 lgx:px-2.5 fill-cyan-400"
-                    /></LinkPageButton
+                    ><Github class="px-2 fill-neutral-100" /></LinkPageButton
                 >
                 <LinkPageButton href="https://www.last.fm/user/Glutesha"
                     ><LastFM
-                        class="px-2.5 lgx:px-3 mr-0.5 mt-0.5 fill-cyan-400"
+                        class="px-2.5 mr-0.5 mt-0.5 fill-neutral-100"
                     /></LinkPageButton
                 >
                 <LinkPageButton
                     href="https://bsky.app/profile/glutesha.pds.witchcraft.systems"
-                    ><Bluesky
-                        class="px-2 lgx:px-3 fill-cyan-400"
-                    /></LinkPageButton
+                    ><Bluesky class="px-3 fill-neutral-100" /></LinkPageButton
                 >
                 <LinkPageButton href="https://www.reddit.com/user/GLUTESHA/"
-                    ><Reddit class="px-2 fill-cyan-400" /></LinkPageButton
+                    ><Reddit class="px-2 fill-neutral-100" /></LinkPageButton
                 >
                 <LinkPageButton href="https://discord.gg/r3q2z5QpZ8"
-                    ><Discord class="px-2 fill-cyan-400" /></LinkPageButton
+                    ><Discord class="px-2 fill-neutral-100" /></LinkPageButton
                 >
                 <LinkPageButton href="mailto:mail@glutesha.me"
-                    ><Mail
-                        class="px-2 lgx:px-3 fill-cyan-400"
-                    /></LinkPageButton
+                    ><Mail class="px-3 fill-neutral-100" /></LinkPageButton
                 >
-                <LinkPageButton href="/links"
-                    ><Link
-                        class="px-3.5 lgx:px-4.5 fill-cyan-400"
+                <LinkPageButton href="/"
+                    ><Home
+                        class="px-1 lgx:px-2 fill-neutral-100"
                     /></LinkPageButton
                 >
             </div>

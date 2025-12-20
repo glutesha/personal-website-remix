@@ -4,25 +4,41 @@ import NavigationButton from "../parts/NavigationButton.astro";
 import { Chuvirla } from "./react/Chuvirla";
 
 // Images
-import frame from '../../assets/images/frame.png';
-import logo from '../../assets/images/logo.png';
+import frame from "../../assets/images/frame.png";
+import logo from "../../assets/images/logo.png";
 
 // Icons
-import IdIcon from '../../assets/images/vector/id.svg'
-import SpeechBubbleIcon from '../../assets/images/vector/speechbubble.svg'
-import TerminalIcon from '../../assets/images/vector/terminal.svg'
-import ArrowIcon from '../../assets/images/vector/arrow.svg'
+import IdIcon from "../../assets/images/vector/id.svg";
+import SpeechBubbleIcon from "../../assets/images/vector/speechbubble.svg";
+import TerminalIcon from "../../assets/images/vector/terminal.svg";
+import ArrowIcon from "../../assets/images/vector/arrow.svg";
 ---
 
-<div class="bg-neutral-950 h-screen max-h-250 flex flex-col justify-center items-center shadow-xl shadow-black/25
-mdx:flex-row mdx:pb-10 gap-2 mdx:gap-8 px-5 py-5 pt-18 mdx:pt-8 mdx:h-120">
-    <div style={{ backgroundImage: `url(${frame.src})` }} class="ring-1 ring-white shadow-xl shadow-neutral-100/20 rounded-full">
-            <Chuvirla client:load />
+<div
+    class="bg-neutral-950 h-screen max-h-250 flex flex-col justify-center items-center shadow-xl shadow-black/25
+mdx:flex-row mdx:pb-10 gap-2 mdx:gap-8 px-5 py-5 mdx:pt-8 mdx:h-120"
+>
+    <div
+        style={{ backgroundImage: `url(${frame.src})` }}
+        class="ring-1 ring-white shadow-xl shadow-neutral-100/20 rounded-full"
+    >
+        <Chuvirla client:load />
     </div>
-    <div class="mdx:pt-5 mdx:flex-col gap-2 justify-center items-center text-center mdx:text-start">
-        <Image loading="eager" class="w-[360px] lgx:w-2xl" src={logo} alt="Glutesha"/>
-        <p class="mdx:ms-1 font-mono text-[18px] lgx:text-[33px]">Goober, geek, tech obsessed freak</p>
-        <div class="flex flex-row flex-wrap font-mono font-bold justify-center mdx:justify-normal items-center mdx:items-begin gap-3 lgx:gap-5 pb-5 rounded-2xl pt-3 mdx:w-full">
+    <div
+        class="mdx:pt-5 mdx:flex-col gap-2 justify-center items-center text-center mdx:text-start"
+    >
+        <Image
+            loading="eager"
+            class="w-[360px] lgx:w-2xl"
+            src={logo}
+            alt="Glutesha"
+        />
+        <p class="mdx:ms-1 font-mono text-[18px] lgx:text-[33px]">
+            Goober, geek, tech obsessed freak
+        </p>
+        <div
+            class="flex flex-row flex-wrap font-mono font-bold justify-center mdx:justify-normal items-center mdx:items-begin gap-3 lgx:gap-5 pb-5 rounded-2xl pt-3 mdx:w-full"
+        >
             <NavigationButton href="#about" text="About">
                 <IdIcon class="button-icon" />
             </NavigationButton>
@@ -37,5 +53,7 @@ mdx:flex-row mdx:pb-10 gap-2 mdx:gap-8 px-5 py-5 pt-18 mdx:pt-8 mdx:h-120">
             </NavigationButton>
         </div>
     </div>
-    <p class="text-center text-3xl font-bold mdx:hidden pt-8 animate-bounce">⌄</p>
+    <p class="text-center text-3xl font-bold mdx:hidden pt-8 animate-bounce">
+        ⌄
+    </p>
 </div>
