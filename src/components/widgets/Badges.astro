@@ -1,101 +1,130 @@
 ---
 import { Image } from "astro:assets";
 // Layouts
-import Card from '../../layouts/Card.astro';
+import Card from "../../layouts/Card.astro";
 
 // Icons
-import Diamond from '../../assets/images/vector/diamond.svg'
+import Diamond from "../../assets/images/vector/diamond.svg";
 
 const staticBadges = Object.values(
-    import.meta.glob('/public/badges/*.{png,jpg,gif}', {eager: true, as: "url"})
+    import.meta.glob("/public/badges/*.{png,jpg,gif}", {
+        eager: true,
+        as: "url",
+    }),
 );
 
 const interactiveBadges = [
     {
         href: "https://otomir23.me/",
         src: "https://otomir23.me/88x31.png",
-        alt: "otomir23"
+        alt: "otomir23",
     },
     {
         href: "https://keetsta.me",
         src: "https://keetsta.me/88x31.png",
-        alt: "keetsta"
+        alt: "keetsta",
     },
     {
         href: "https://jsopn.com/?glunging=true",
         src: "https://jsopn.com/images/88x31/button.gif",
-        alt: "jsopn"
+        alt: "jsopn",
     },
     {
         href: "https://milkcool.ru",
         src: "/badges/interactive/lily.png",
-        alt: "milkcool"
+        alt: "milkcool",
     },
     {
         href: "https://fckn.rocks",
         src: "https://fckn.rocks/fcknrocks.png",
-        alt: "fcknrocks"
+        alt: "fcknrocks",
     },
     {
         href: "https://veselcraft.ru/",
         src: "https://veselcraft.ru/images/vc.gif",
-        alt: "veselcraft"
+        alt: "veselcraft",
     },
     {
         href: "https://nikableh.moe/",
         src: "https://nikableh.moe/88x31.png",
-        alt: "nikableh"
+        alt: "nikableh",
     },
     {
         href: "https://www.youtube.com/user/LinusTechTips",
         src: "/badges/interactive/ltt.gif",
-        alt: "freetechtips"
+        alt: "freetechtips",
     },
     {
         href: "https://asyasocute.online/",
         src: "https://asyasocute.online/badges/cowl.png",
-        alt: "asya"
+        alt: "asya",
     },
     {
         href: "https://egroish.net/kitty.html",
         src: "https://egroish.net/images/kitty_badge.png",
-        alt: "Kitty Badge"
+        alt: "Kitty Badge",
     },
     {
         href: "https://ari.express",
         src: "https://ari.express/assets/Button.png",
-        alt: "ari"
+        alt: "ari",
     },
     {
         href: "https://tei.su/",
         src: "https://tei.su/88x31/teidesu.png",
-        alt: "teidesu"
+        alt: "teidesu",
     },
     {
         href: "https://cesa.rs/",
         src: "https://cesa.rs/badges/cesarean.png",
-        alt: "cesarean"
+        alt: "cesarean",
     },
     {
         href: "https://flipper.net",
         src: "/badges/interactive/flipper.gif",
-        alt: "flipper"
-    }
+        alt: "flipper",
+    },
+    {
+        href: "https://akarpov.ru",
+        src: "https://akarpov.ru/media/benis.gif",
+        alt: "akarpov",
+    },
 ];
 ---
 
-
 <Card title="Favorite Badges" additional_class="mdx:basis-95 lgx:basis-117">
-    <Diamond class="card-header-icon" slot="icon"/>
-    <div class="pt-2 flex flex-wrap justify-center items-center lgx:gap-1.5" style="image-rendering: pixelated;" slot="content">
-        {interactiveBadges.map((b) => (
+    <Diamond class="card-header-icon" slot="icon" />
+    <div
+        class="pt-2 flex flex-wrap justify-center items-center lgx:gap-1.5"
+        style="image-rendering: pixelated;"
+        slot="content"
+    >
+        {
+            interactiveBadges.map((b) => (
                 <a href={b.href} target="_blank" rel="noopener noreferrer">
-                    <Image width={88} height={33} loading="lazy" class="badge" src={b.src} alt={b.alt} />
+                    <Image
+                        width={88}
+                        height={33}
+                        loading="lazy"
+                        class="badge"
+                        src={b.src}
+                        alt={b.alt}
+                    />
                 </a>
-        ))}
+            ))
+        }
 
-        {staticBadges.map((src) => (
-                <Image width={88} height={33} loading="lazy" class="badge" src={src} alt="badge" />
-        ))}
+        {
+            staticBadges.map((src) => (
+                <Image
+                    width={88}
+                    height={33}
+                    loading="lazy"
+                    class="badge"
+                    src={src}
+                    alt="badge"
+                />
+            ))
+        }
     </div>
 </Card>
