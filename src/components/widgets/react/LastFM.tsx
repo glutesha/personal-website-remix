@@ -24,7 +24,7 @@ export const LastFM = () => {
 
     if (!track) {
         return (
-            <div className="flex flex-col mdx:flex-row relative font-mona-sans pt-2 pb-1 font-black font-stretch-125%">
+            <div className="flex flex-col animate-pulse mdx:flex-row relative font-mona-sans pt-2 pb-1 font-black font-stretch-125%">
                 <img className="rounded-2xl outline-2 outline-neutral-800 aspect-square shrink-0 z-1 w-[370px] mdx:w-[300px]" src={avatar.src} alt="Loading"/>
                 <img src={tribal.src} alt="Chuvirla" className="absolute -right-20 -bottom-28 max-h-70 mdx:max-h-max mdx:left-auto mdx:-right-30 mdx:max-w-md mdx:-top-10 invert opacity-6" />
                 <div className="flex justify-center px-1 mdx:px-5 py-2 flex-col text-2xl font-bold gap-2">

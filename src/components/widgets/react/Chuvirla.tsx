@@ -99,7 +99,7 @@ useGLTF.preload("/gluten.glb");
 
 const Placeholder = () => {
     return (
-        <img src={avatar_transparent.src} width="300" height="300" alt="placeholder"/>
+        <img src={avatar_transparent.src} className="animate-pulse" width="300" height="300" alt="placeholder"/>
     );
 }
 export const Chuvirla = () => {
