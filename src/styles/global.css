@@ -66,21 +66,21 @@
     }
 
     .tile-button {
-        @apply bg-neutral-500/20 w-22.5 lgx:w-28.5 flex-1 mdx:flex-none aspect-square flex
+        @apply bg-neutral-800 w-22.5 z-0 relative lgx:w-28.5 flex-1 mdx:flex-none aspect-square flex
         items-center justify-center rounded-2xl shadow-md shadow-black/50
         transition duration-300 ease-in-out;
     }
     .tile-button:hover {
-        @apply -translate-y-1.5;
+        @apply translate-z-1 -translate-y-1.5;
     }
 
     .tile-linkpage-button {
-        @apply bg-neutral-500/20 w-22 lgx:w-20 flex-1 mdx:flex-none aspect-square flex
+        @apply bg-neutral-800 w-22 z-0 relative lgx:w-20 flex-1 mdx:flex-none aspect-square flex
         items-center justify-center rounded-2xl shadow-md shadow-black/50
         transition duration-300 ease-in-out;
     }
     .tile-linkpage-button:hover {
-        @apply -translate-y-1.5;
+        @apply translate-z-1 -translate-y-1.5;
     }
 
     .tile {

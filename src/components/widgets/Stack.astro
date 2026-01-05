@@ -3,29 +3,32 @@ import Card from "../../layouts/Card.astro";
 import Button from "../parts/Button.astro";
 
 // Icons
-import StackIcon from '../../assets/images/vector/stack.svg'
+import StackIcon from "../../assets/images/vector/stack.svg";
 
 // Button Buttons
-import Python from '../../assets/images/vector/logos/python.svg'
-import Typescript from '../../assets/images/vector/logos/typescript.svg'
-import Cplusplus from '../../assets/images/vector/logos/c++.svg'
-import C from '../../assets/images/vector/logos/c.svg'
-import PlatformIO from '../../assets/images/vector/logos/platformio.svg'
-import Arduino from '../../assets/images/vector/logos/arduino.svg'
-import Espressif from '../../assets/images/vector/logos/espressif.svg'
-import FastAPI from '../../assets/images/vector/logos/fastapi.svg'
+import Python from "../../assets/images/vector/logos/python.svg";
+import Typescript from "../../assets/images/vector/logos/typescript.svg";
+import Cplusplus from "../../assets/images/vector/logos/c++.svg";
+import C from "../../assets/images/vector/logos/c.svg";
+import PlatformIO from "../../assets/images/vector/logos/platformio.svg";
+import Arduino from "../../assets/images/vector/logos/arduino.svg";
+import Espressif from "../../assets/images/vector/logos/espressif.svg";
+import FastAPI from "../../assets/images/vector/logos/fastapi.svg";
 ---
 
 <Card title="Stack" additional_class="lgx:basis-127">
-    <StackIcon class="card-header-icon" slot="icon"/>
-    <div class="grid grid-cols-4 -m-0.5 justify-center items-center gap-2 pt-1.5" slot="content">
-        <Button><Python class="px-4 lgx:px-4.5 fill-neutral-200"/></Button>
-        <Button><Typescript class="px-4 lgx:px-5 fill-neutral-200"/></Button>
-        <Button><Cplusplus class="px-3 fill-neutral-200"/></Button>
-        <Button><C class="px-4 lgx:px-4.5 fill-neutral-200"/></Button>
-        <Button><Arduino class="px-3.5 lgx:px-4.5 fill-neutral-200"/></Button>
-        <Button><Espressif class="px-4 lgx:px-4.5 fill-neutral-200"/></Button>
-        <Button><PlatformIO class="px-4 lgx:px-4.5 fill-neutral-200"/></Button>
-        <Button><FastAPI class="px-4 lgx:px-4.5 fill-neutral-200"/></Button>
+    <StackIcon class="card-header-icon" slot="icon" />
+    <div
+        class="grid grid-cols-4 -m-0.5 justify-center items-center gap-1 lgx:gap-1.5 pt-1.5"
+        slot="content"
+    >
+        <Button><Python class="px-4 lgx:px-4.5 fill-neutral-200" /></Button>
+        <Button><Typescript class="px-4 lgx:px-5 fill-neutral-200" /></Button>
+        <Button><Cplusplus class="px-3 fill-neutral-200" /></Button>
+        <Button><C class="px-4 lgx:px-4.5 fill-neutral-200" /></Button>
+        <Button><Arduino class="px-3.5 lgx:px-4.5 fill-neutral-200" /></Button>
+        <Button><Espressif class="px-4 lgx:px-4.5 fill-neutral-200" /></Button>
+        <Button><PlatformIO class="px-4 lgx:px-4.5 fill-neutral-200" /></Button>
+        <Button><FastAPI class="px-4 lgx:px-4.5 fill-neutral-200" /></Button>
     </div>
 </Card>
