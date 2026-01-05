@@ -56,7 +56,7 @@
     }
 
     .badge {
-        @apply aspect-88/31 w-30.5 mdx:w-29 lgx:w-35 transition duration-300;
+        @apply aspect-88/31 w-30.5 relative z-0 mdx:w-29 lgx:w-35 transition duration-300;
     }
     .badge:hover {
         @apply z-10 -translate-y-1.5 scale-200 shadow-xl shadow-black/50;
