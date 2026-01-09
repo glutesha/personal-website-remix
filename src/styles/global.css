@@ -35,7 +35,7 @@
         items-center justify-start gap-1 font-bold text-[20px];
     }
     .card-header-icon {
-        @apply w-5 fill-neutral-200 mt-0.5;
+        @apply w-5 fill-white mt-0.5;
     }
 
     #about:target {
