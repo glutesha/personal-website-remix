@@ -1,24 +1,42 @@
 ---
 // Images
 import { execSync } from "node:child_process";
-import Avatar from '../../assets/images/vector/avatar.svg';
+import Avatar from "../../assets/images/vector/avatar.svg";
 
-const PUBLIC_GIT_COMMIT = execSync(
-    "git rev-parse --short HEAD"
-).toString().trim();
+const PUBLIC_GIT_COMMIT = execSync("git rev-parse --short HEAD")
+    .toString()
+    .trim();
 ---
 
-<div class="bg-neutral-950 h-32 mdx:h-50 flex flex-row gap-5 mdx:gap-20 px-2.5 mdx:px-10 items-center">
+<div
+    class="bg-neutral-950 h-32 mdx:h-50 flex flex-row gap-5 mdx:gap-20 px-2.5 mdx:px-10 items-center"
+>
     <div class="flex items-center flex-row w-full justify-between">
         <div class="flex-col text-footer">
-            <p class="mdx:text-2xl">Made by Glutesha with &#60;3</p>
-            <p class="text-md mdx:text-2xl text-neutral-400">
-                Mascot designed by <a class="text-cyan-300" href="https://evakirieshki.straw.page/" target="_blank" rel="noopener noreferrer">Aira</a>
-                and modelled by <a class="text-cyan-300" href="https://brabion.carrd.co/" target="_blank" rel="noopener noreferrer">BRABION</a>
+            <p class="mdx:text-2xl">
+                Made by Glutesha with weaponized geek autism :3
             </p>
-            <a class="text-cyan-300 mdx:text-2xl" href="mailto:mail@glutesha.me">mail@glutesha.me</a>
-            <p class="text-neutral-400 text-md mdx:text-2xl">Commit #{PUBLIC_GIT_COMMIT}</p>
+            <p class="text-md mdx:text-2xl text-neutral-400">
+                Mascot designed by <a
+                    class="text-cyan-300"
+                    href="https://evakirieshki.straw.page/"
+                    target="_blank"
+                    rel="noopener noreferrer">Aira</a
+                >
+                and modelled by <a
+                    class="text-cyan-300"
+                    href="https://brabion.carrd.co/"
+                    target="_blank"
+                    rel="noopener noreferrer">BRABION</a
+                >
+            </p>
+            <a class="text-cyan-300 mdx:text-2xl" href="mailto:mail@glutesha.me"
+                >mail@glutesha.me</a
+            >
+            <p class="text-neutral-400 text-md mdx:text-2xl">
+                Commit #{PUBLIC_GIT_COMMIT}
+            </p>
         </div>
-        <Avatar class="stroke-1 collapse mdx:visible h-30 w-30"/>
+        <Avatar class="stroke-1 hidden mdx:block h-30 w-30" />
     </div>
 </div>
