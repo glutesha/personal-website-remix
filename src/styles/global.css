@@ -11,7 +11,7 @@
 
 @layer components {
     .polaroid {
-        @apply flex flex-col w-100 mdx:max-w-56 aspect-3/2 justify-center p-5 lgx:max-w-65 lgx:max-h-75
+        @apply flex flex-col w-100 mdx:max-w-56 mdx:max-h-76 aspect-3/2 justify-center p-5 lgx:max-w-65 lgx:max-h-76
         gap-2 items-center font-serif text-3xl text-center text-white
         bg-neutral-900 shadow-md shadow-black/50 transition duration-300 ease-in-out;
     }
