@@ -53,7 +53,7 @@ export const Webring = () => {
     >
       <a
         id="prevurl"
-        className="flex-1 font-mono text-neutral-300"
+        className="flex-1 font-mono text-neutral-300 truncate"
         href={prev?.url ?? "https://webring.otomir23.me/30/prev"}
       >
         &lt; {prev?.name ?? "prev"}
@@ -67,7 +67,7 @@ export const Webring = () => {
       </a>
       <a
         id="nexturl"
-        className="flex-1 font-mono text-neutral-300 text-end"
+        className="flex-1 font-mono text-neutral-300 text-end truncate"
         href={next?.url ?? "https://webring.otomir23.me/30/next"}
       >
         {next?.name ?? "next"} &gt;
