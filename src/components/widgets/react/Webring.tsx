@@ -13,7 +13,7 @@ export const Webring = () => {
   const [bottom, setBottom] = useState(false);
 
   useEffect(() => {
-    fetch("https://webring.otomir23.me/30/data")
+    fetch("https://webring.otomir23.me/glutesha/data")
       .then((res) => res.json())
       .then((data) => {
         setPrev(data.prev);
