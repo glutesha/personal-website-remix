@@ -42,7 +42,7 @@ export const Webring = () => {
     <div
       id="webring"
       className={
-        "hidden fixed z-50 bottom-2 mdx:left-1/2 left-1/2 mdx:bottom-5 -translate-x-1/2 justify-center items-center " +
+        "fixed z-50 bottom-2 mdx:left-1/2 left-1/2 mdx:bottom-5 -translate-x-1/2 justify-center items-center " +
         "flex bg-black outline-1 outline-neutral-300 rounded-full w-full max-w-[calc(100%-20px)] " +
         "text-md mdx:w-3xl p-5 mdx:gap-10 mdx:text-2xl transition duration-300 ease-in-out" +
         (scrolled
