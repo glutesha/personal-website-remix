@@ -55,6 +55,12 @@
         scroll-margin-top: 10vh;
     }
 
+    .pagering-link {
+        transform: scale(1);
+        transform-origin: center;
+        @apply scale-110 mdx:scale-180;
+    }
+
     .badge {
         @apply aspect-88/31 w-30.5 relative z-0 mdx:w-29 lgx:w-35 transition duration-300;
     }
