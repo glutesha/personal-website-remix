@@ -69,7 +69,7 @@ export const Webring = () => {
         className="flex-1 font-mono text-neutral-300 truncate"
         href={prev?.url ?? "https://webring.otomir23.me/30/prev"}
       >
-        &lt; <span className="hidden mdx:inline">{next?.name ?? "prev"} </span>
+        &lt; <span className="hidden mdx:inline">{prev?.name ?? "prev"} </span>
       </a>
       <a
         className="font-mono mdx:text-3xl text-center"
