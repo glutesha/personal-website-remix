@@ -1,6 +1,6 @@
 ---
 // Components
-import { LastFM } from "./react/LastFM";
+import LastFM from "./LastFM.astro";
 
 // Icons
 import Music from "../../assets/images/vector/music.svg";
@@ -11,5 +11,5 @@ import Card from "../../layouts/Card.astro";
 
 <Card title="LastFM" additional_class="overflow-clip mdx:basis-202 lgx:basis-256.5">
     <Music class="card-header-icon" slot="icon"/>
-    <LastFM client:load slot="content"/>
+    <LastFM slot="content"/>
 </Card>
