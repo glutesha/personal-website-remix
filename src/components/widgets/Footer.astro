@@ -2,7 +2,7 @@
 // Images
 import Avatar from "../../assets/images/vector/avatar.svg";
 
-const PUBLIC_GIT_COMMIT = process.env.GIT_COMMIT_HASH;
+const PUBLIC_GIT_COMMIT = (process.env.PUBLIC_GIT_COMMIT || " ").slice(0, 7);
 ---
 
 <div
