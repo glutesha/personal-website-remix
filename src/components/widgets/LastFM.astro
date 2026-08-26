@@ -5,18 +5,20 @@ import { Image } from "astro:assets";
 import avatar from "../../assets/images/avatar.png";
 import tribal from "../../assets/images/tribal.png";
 
-const API_KEY = import.meta.env.LASTFM_API_KEY;
-const USER = import.meta.env.LASTFM_USER;
-const BASE_URL = import.meta.env.LASTFM_BASE_URL;
+const API_KEY = process.env.LASTFM_API_KEY;
+const USER = process.env.LASTFM_USER;
+const BASE_URL = process.env.LASTFM_BASE_URL;
 
 let track = null;
 
 try {
-  const res = await fetch(`${BASE_URL}?method=user.getrecenttracks&user=${USER}&api_key=${API_KEY}&format=json`);
-  const data = await res.json();
-  track = data.recenttracks.track[0];
+    const res = await fetch(
+        `${BASE_URL}?method=user.getrecenttracks&user=${USER}&api_key=${API_KEY}&format=json`,
+    );
+    const data = await res.json();
+    track = data.recenttracks.track[0];
 } catch (e) {
-  console.error("Failed to fetch Last.fm", e);
+    console.error("Failed to fetch Last.fm", e);
 }
 
 const trackName = track?.name;
@@ -26,22 +28,43 @@ const trackURL = track?.url;
 const trackImage = track?.image?.[3]?.["#text"] || avatar.src;
 ---
 
-<div class="flex flex-col mdx:flex-row relative font-mona-sans pt-2 pb-1 font-black font-stretch-125%">
-    <img class="rounded-2xl outline-2 outline-neutral-800 aspect-square shrink-0 z-1" src={trackImage} alt={trackName || "Loading"} />
-    <Image src={tribal} alt="Chuvirla" class="absolute -right-20 -bottom-28 max-h-70 mdx:max-h-max mdx:left-auto mdx:-right-30 mdx:max-w-md mdx:-top-10 invert opacity-6" />
-    <div class="flex justify-center px-1 mdx:px-5 py-2 flex-col text-2xl font-bold gap-2">
-        {track ? (
-            <>
-                <p class="pt-2 text-4xl mdx:text-5xl z-1">{trackName}</p>
-                <p class="text-xl z-1">{artistName}</p>
-                <p class="text-xl z-1">{albumName}</p>
-                <a class="text-red-400 z-1" href={trackURL} target="_blank" rel="noopener noreferrer">listen</a>
-            </>
-        ) : (
-            <>
-                <p class="pt-2 text-4xl mdx:text-5xl z-1">Loading...</p>
-                <p class="text-xl z-1">please wait</p>
-            </>
-        )}
+<div
+    class="flex flex-col mdx:flex-row relative font-mona-sans pt-2 pb-1 font-black font-stretch-125%"
+>
+    <img
+        class="rounded-2xl outline-2 outline-neutral-800 aspect-square shrink-0 z-1"
+        src={trackImage}
+        alt={trackName || "Loading"}
+    />
+    <Image
+        src={tribal}
+        alt="Chuvirla"
+        class="absolute -right-20 -bottom-28 max-h-70 mdx:max-h-max mdx:left-auto mdx:-right-30 mdx:max-w-md mdx:-top-10 invert opacity-6"
+    />
+    <div
+        class="flex justify-center px-1 mdx:px-5 py-2 flex-col text-2xl font-bold gap-2"
+    >
+        {
+            track ? (
+                <>
+                    <p class="pt-2 text-4xl mdx:text-5xl z-1">{trackName}</p>
+                    <p class="text-xl z-1">{artistName}</p>
+                    <p class="text-xl z-1">{albumName}</p>
+                    <a
+                        class="text-red-400 z-1"
+                        href={trackURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        listen
+                    </a>
+                </>
+            ) : (
+                <>
+                    <p class="pt-2 text-4xl mdx:text-5xl z-1">Loading...</p>
+                    <p class="text-xl z-1">please wait</p>
+                </>
+            )
+        }
     </div>
 </div>
