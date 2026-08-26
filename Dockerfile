@@ -16,6 +16,8 @@ ENV PUBLIC_GIT_COMMIT=$GIT_COMMIT_HASH
 RUN npm run build
 
 FROM base AS runtime
+ARG GIT_COMMIT_HASH
+ENV PUBLIC_GIT_COMMIT=$GIT_COMMIT_HASH
 COPY --from=prod-deps /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 
