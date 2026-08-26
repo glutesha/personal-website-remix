@@ -1,36 +1,41 @@
 ---
 // Layouts
-import Page from '../layouts/Page.astro';
+import Page from "../layouts/Page.astro";
 
 // Components
-import Header from '../components/widgets/Header.astro'
-import About from '../components/widgets/About.astro';
-import Contact from '../components/widgets/Contact.astro';
-import Me from '../components/widgets/Me.astro';
-import Stats from '../components/widgets/Stats.astro';
-import Setups from '../components/widgets/Setups.astro';
-import Badges from '../components/widgets/Badges.astro';
+import Header from "../components/widgets/Header.astro";
+import About from "../components/widgets/About.astro";
+import Contact from "../components/widgets/Contact.astro";
+import Me from "../components/widgets/Me.astro";
+import Stats from "../components/widgets/Stats.astro";
+import Setups from "../components/widgets/Setups.astro";
+import Badges from "../components/widgets/Badges.astro";
 import Stack from "../components/widgets/Stack.astro";
 import Listened from "../components/widgets/Listened.astro";
+import Webring from "../components/widgets/Webring.astro";
 
-import { Webring } from '../components/widgets/react/Webring';
 import Footer from "../components/widgets/Footer.astro";
 import background from "../assets/images/background.png";
 ---
 
 <Page>
     <Header />
-    <div class="flex items-center justify-center" style={`background-image: url(${background.src}); background-attachment: fixed; background-size: 100%`}>
-        <div class="flex flex-col items-center max-w-300 mdx:justify-center mdx:flex-row mdx:flex-wrap mdx:px-5 p-2 gap-2">
+    <div
+        class="flex items-center justify-center"
+        style={`background-image: url(${background.src}); background-attachment: fixed; background-size: 100%`}
+    >
+        <div
+            class="flex flex-col items-center max-w-300 mdx:justify-center mdx:flex-row mdx:flex-wrap mdx:px-5 p-2 gap-2"
+        >
             <About />
             <Me />
             <Stack />
-            <Contact/>
-            <Stats/>
+            <Contact />
+            <Stats />
             <Badges />
-            <Listened server:defer/>
+            <Listened server:defer />
             <Setups />
-            <Webring server:defer/>
+            <Webring server:defer />
         </div>
     </div>
     <Footer />
