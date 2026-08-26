@@ -13,6 +13,8 @@ RUN npm install
 
 FROM build-deps AS build
 COPY . .
+ARG GIT_COMMIT_HASH
+ENV PUBLIC_GIT_COMMIT=$GIT_COMMIT_HASH
 RUN npm run build
 
 FROM base AS runtime

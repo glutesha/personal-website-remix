@@ -1,11 +1,8 @@
 ---
 // Images
-import { execSync } from "node:child_process";
 import Avatar from "../../assets/images/vector/avatar.svg";
 
-const PUBLIC_GIT_COMMIT = execSync("git rev-parse --short HEAD")
-    .toString()
-    .trim();
+const PUBLIC_GIT_COMMIT = import.meta.env.GIT_COMMIT_HASH;
 ---
 
 <div
