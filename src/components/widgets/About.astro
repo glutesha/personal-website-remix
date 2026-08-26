@@ -1,12 +1,31 @@
 ---
 import Card from "../../layouts/Card.astro";
-import { AboutText } from "./react/AboutText.tsx";
 
 // Icons
 import IdIcon from '../../assets/images/vector/id.svg'
+
+const today = new Date();
+const birthDate = new Date("2008-09-25"); // Now you know when to wish me a happy birthday :3
+
+const m = today.getMonth() - birthDate.getMonth();
+const y = today.getFullYear() - birthDate.getFullYear();
+const age =
+  m < 0 || (m === 0 && today.getDate() < birthDate.getDate()) ? y - 1 : y;
 ---
 
 <Card id="about" title="About" additional_class="mdx:basis-144 lgx:basis-190">
     <IdIcon class="card-header-icon" slot="icon"/>
-    <AboutText slot="content"/>
+    <div class="text-abt font-mona-sans lgx:text-abtx px-0.5 space-y-2" slot="content">
+        <p class="text-abt font-mona-sans lgx:text-abtx px-0.5">
+            I am a russian {age} y.o. teenager currently studying in high school.
+            Interested in <text class="text-orange-400">web</text> and{" "}
+            <text class="text-orange-400">embedded</text>. I love learning new
+            things through practice and participating in hackathons and olympiads.
+            Also interested in <text class="text-orange-400">DJing</text> and{" "}
+            <text class="text-orange-400">visuals</text>.{" "}
+            <text class="text-neutral-300 italic">
+            Jack of all trades, often times better than a master of one.
+            </text>
+        </p>
+    </div>
 </Card>
