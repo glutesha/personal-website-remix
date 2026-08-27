@@ -72,7 +72,7 @@ export const Webring = ({ prev, next }: entryProps) => {
           </div>
         </a>
         <a
-          className="font-mono mdx:text-2xl font-bold text-center"
+          className="font-mono mdx:text-2xl font-bold text-center outline-1 py-1 px-4 rounded-full hover:shadow-neutral-300 transition duration-150 hover:-translate-y-1 hover:shadow-md"
           href="https://webring.otomir23.me/"
         >
           Otoring
