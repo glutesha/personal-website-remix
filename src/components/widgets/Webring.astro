@@ -4,8 +4,12 @@ import { Webring } from "../../components/widgets/react/Webring";
 
 let webringData = { prev: null, next: null };
 
-const SLUG = process.env.WEBRING_SLUG || "glutesha";
-const BASE_URL = process.env.WEBRING_BASE_URL || "https://webring.otomir23.me/";
+const SLUG =
+    process.env.WEBRING_SLUG || import.meta.env.WEBRING_SLUG || "glutesha";
+const BASE_URL =
+    process.env.WEBRING_BASE_URL ||
+    import.meta.env.WEBRING_BASE_URL ||
+    "https://webring.otomir23.me/";
 
 try {
     const res = await fetch(BASE_URL + SLUG + "/data");

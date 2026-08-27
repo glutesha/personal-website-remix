@@ -5,9 +5,9 @@ import { Image } from "astro:assets";
 import avatar from "../../assets/images/avatar.png";
 import tribal from "../../assets/images/tribal.png";
 
-const API_KEY = process.env.LASTFM_API_KEY;
-const USER = process.env.LASTFM_USER;
-const BASE_URL = process.env.LASTFM_BASE_URL;
+const API_KEY = process.env.LASTFM_API_KEY || import.meta.env.LASTFM_API_KEY;
+const USER = process.env.LASTFM_USER || import.meta.env.LASTFM_USER;
+const BASE_URL = process.env.LASTFM_BASE_URL || import.meta.env.LASTFM_BASE_URL;
 
 let track = null;
 
