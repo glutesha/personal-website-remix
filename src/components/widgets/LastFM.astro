@@ -12,10 +12,16 @@ const BASE_URL = process.env.LASTFM_BASE_URL || import.meta.env.LASTFM_BASE_URL;
 let track = null;
 
 try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 1500);
     const res = await fetch(
         `${BASE_URL}?method=user.getrecenttracks&user=${USER}&api_key=${API_KEY}&format=json`,
+        {
+            signal: controller.signal,
+        },
     );
     const data = await res.json();
+    clearTimeout(timeoutId);
     track = data.recenttracks.track[0];
 } catch (e) {
     console.error("Failed to fetch Last.fm", e);
