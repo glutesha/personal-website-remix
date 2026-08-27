@@ -21,7 +21,6 @@ interface entryProps {
 }
 
 export const Webring = ({ prev, next }: entryProps) => {
-  const [scrolled, setScrolled] = useState(false);
   const [bottom, setBottom] = useState(false);
 
   useEffect(() => {
@@ -37,7 +36,6 @@ export const Webring = ({ prev, next }: entryProps) => {
       );
 
       setBottom(scrollY + innerH >= docHeight - 20);
-      setScrolled(scrollY > 20);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -49,9 +47,6 @@ export const Webring = ({ prev, next }: entryProps) => {
         "fixed z-50 bottom-5 mdx:left-1/2 left-1/2 -translate-x-1/2 justify-between items-center " +
         "flex flex-row gap-2 justify-center " +
         "w-full max-w-[calc(100%-20px)] " +
-        (scrolled
-          ? "translate-y-0 "
-          : "absolute translate-y-50 mdx:translate-y-0 ") +
         (bottom ? "absolute translate-y-50 " : "translate-y-0 ") +
         "transition duration-300 ease-in-out"
       }
@@ -61,7 +56,7 @@ export const Webring = ({ prev, next }: entryProps) => {
         className={
           "justify-center items-center " +
           "flex bg-black outline-1 outline-neutral-300 rounded-full w-full max-w-[calc(100%-10px)] " +
-          "text-[20px] mdx:w-xl p-5 mdx:text-2xl h-18"
+          "text-[20px] mdx:w-xl p-5 mdx:text-2xl h-12 mdx:h-15"
         }
       >
         <a
@@ -92,7 +87,7 @@ export const Webring = ({ prev, next }: entryProps) => {
         className={
           "flex bg-black outline-1 outline-neutral-300 rounded-full w-full mdx:w-xs max-w-[calc(100%-10px)] " +
           "justify-center items-center " +
-          "h-18 text-md mdx:w-xs p-5 mdx:gap-10 mdx:text-2xl"
+          "h-12 mdx:h-15 text-md mdx:w-xs p-5 mdx:gap-10 mdx:text-2xl"
         }
       >
         <pagering-link theme="dark" className="pagering-link"></pagering-link>

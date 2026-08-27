@@ -2,7 +2,16 @@
 // Components
 import { Webring } from "../../components/widgets/react/Webring";
 
-let webringData = { prev: null, next: null };
+interface WebringEntry {
+    name: string;
+    url: string;
+}
+interface WebringDataResponse {
+    prev: WebringEntry | null;
+    next: WebringEntry | null;
+}
+
+let webringData: WebringDataResponse = { prev: null, next: null };
 
 const SLUG =
     process.env.WEBRING_SLUG || import.meta.env.WEBRING_SLUG || "glutesha";
@@ -19,4 +28,55 @@ try {
 }
 ---
 
-<Webring client:load prev={webringData.prev} next={webringData.next} />
+<noscript>
+    <style>
+        .webring-interactive {
+            display: none !important;
+        }
+    </style>
+    <div
+        class={"fixed z-50 bottom-5 mdx:left-1/2 left-1/2 -translate-x-1/2 justify-between items-center " +
+            "flex flex-row gap-2 justify-center " +
+            "w-full max-w-[calc(100%-20px)] " +
+            "transition duration-300 ease-in-out"}
+    >
+        <div
+            id="webring"
+            class={"justify-center items-center " +
+                "flex bg-black outline-1 outline-neutral-300 rounded-full w-full max-w-[calc(100%-10px)] " +
+                "text-[20px] mdx:w-xl p-5 mdx:text-2xl h-12 mdx:h-15"}
+        >
+            <a
+                id="prevurl"
+                class="flex-1 font-mono text-neutral-300 truncate"
+                href={webringData.prev?.url ??
+                    "https://webring.otomir23.me/30/prev"}
+            >
+                &lt;{" "}
+                <span class="hidden mdx:inline"
+                    >{webringData.prev?.name || "prev"}
+                </span>
+            </a>
+            <a
+                class="font-mono mdx:text-3xl text-center"
+                href="https://webring.otomir23.me/"
+            >
+                {" "}
+                Otoring
+            </a>
+            <a
+                id="nexturl"
+                class="flex-1 font-mono text-neutral-300 text-end truncate"
+                href={webringData.next?.url ??
+                    "https://webring.otomir23.me/30/next"}
+            >
+                <span class="hidden mdx:inline"
+                    >{webringData.next?.name ?? "next"}
+                </span>&gt;
+            </a>
+        </div>
+    </div>
+</noscript>
+<div class="webring-interactive">
+    <Webring client:load prev={webringData.prev} next={webringData.next} />
+</div>
