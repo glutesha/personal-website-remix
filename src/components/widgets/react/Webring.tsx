@@ -94,7 +94,7 @@ export const Webring = ({ prev, next }: entryProps) => {
         className={
           "flex bg-black outline-1 outline-neutral-300 rounded-full w-full mdx:w-xs max-w-[calc(100%-10px)] " +
           "justify-center items-center " +
-          "h-12 mdx:h-15 text-md mdx:w-xs p-5 mdx:gap-10 mdx:text-2xl"
+          "h-12 mdx:h-15 text-md mdx:w-xs py-5 px-2.5 mdx:px-3 mdx:gap-10 mdx:text-2xl"
         }
       >
         <pagering-link theme="dark" className="pagering-link"></pagering-link>
