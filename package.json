@@ -1,7 +1,7 @@
 {
   "name": "personal-website-remix",
   "type": "module",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "scripts": {
     "dev": "astro dev --host",
     "build": "astro build",
