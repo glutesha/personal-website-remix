@@ -57,7 +57,7 @@ export const Webring = ({ prev, next }: entryProps) => {
         className={
           "justify-center items-center " +
           "flex bg-black outline-1 outline-neutral-300 rounded-full w-full max-w-[calc(100%-10px)] " +
-          "text-[15px] mdx:w-xl p-5 mdx:text-xl lgx:text-2xl h-12 mdx:h-15"
+          "text-[15px] mdx:w-xl py-5 px-2 mdx:px-3 mdx:text-xl lgx:text-2xl h-12 mdx:h-15"
         }
       >
         <a
@@ -72,7 +72,7 @@ export const Webring = ({ prev, next }: entryProps) => {
           </div>
         </a>
         <a
-          className="font-mono mdx:text-2xl font-bold text-center outline-1 py-1 px-4 rounded-full transition duration-150 active:shadow-neutral-600 active:-translate-y-0.5 hover:shadow-neutral-300 hover:-translate-y-1 hover:shadow-md"
+          className="font-mono mdx:text-2xl font-bold text-center outline-1 py-0.5 mdx:py-1 px-1.5 mdx:px-5 rounded-full transition duration-150 active:shadow-neutral-600 active:-translate-y-0.5 hover:shadow-neutral-300 hover:-translate-y-1 hover:shadow-md"
           href="https://webring.otomir23.me/"
         >
           Otoring
