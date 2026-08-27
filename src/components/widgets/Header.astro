@@ -1,10 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import NavigationButton from "../parts/NavigationButton.astro";
+
+// Components
 import { Chuvirla } from "./react/Chuvirla";
 
 // Images
 import frame from "../../assets/images/frame.png";
+import avatar_transparent from "../../assets/images/avatar_transparent.png";
 import logo from "../../assets/images/logo.png";
 
 // Icons
@@ -22,7 +25,27 @@ mdx:flex-row mdx:pb-10 gap-2 mdx:gap-8 px-5 py-5 mdx:pt-8 mdx:h-120"
         style={{ backgroundImage: `url(${frame.src})` }}
         class="ring-1 ring-white shadow-xl shadow-neutral-100/20 rounded-full"
     >
-        <Chuvirla client:load />
+        <noscript>
+            <style>
+                .chuvirla-interactive {
+                    display: none !important;
+                }
+            </style>
+            <div
+                class="flex justify-center items-center aspect-square h-100 mdx:h-110 shrink-0 -m-5"
+                id="glutesha"
+            >
+                <Image
+                    alt="Chuvirla"
+                    src={avatar_transparent}
+                    width="300"
+                    height="300"
+                />
+            </div>
+        </noscript>
+        <div class="chuvirla-interactive">
+            <Chuvirla client:load />
+        </div>
     </div>
     <div
         class="mdx:pt-5 mdx:flex-col gap-2 justify-center items-center text-center mdx:text-start"
