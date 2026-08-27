@@ -13,6 +13,7 @@ declare global {
 interface entry {
   name: string;
   url: string;
+  favicon: string;
 }
 
 interface entryProps {
@@ -56,7 +57,7 @@ export const Webring = ({ prev, next }: entryProps) => {
         className={
           "justify-center items-center " +
           "flex bg-black outline-1 outline-neutral-300 rounded-full w-full max-w-[calc(100%-10px)] " +
-          "text-[20px] mdx:w-xl p-5 mdx:text-2xl h-12 mdx:h-15"
+          "text-[15px] mdx:w-xl p-5 mdx:text-xl lgx:text-2xl h-12 mdx:h-15"
         }
       >
         <a
@@ -64,14 +65,16 @@ export const Webring = ({ prev, next }: entryProps) => {
           className="flex-1 font-mono text-neutral-300 truncate"
           href={prev?.url ?? "https://webring.otomir23.me/30/prev"}
         >
-          &lt;{" "}
-          <span className="hidden mdx:inline">{prev?.name ?? "prev"} </span>
+          <div className="flex gap-1 flex-row items-center">
+            <span>&lt;</span>
+            <span className="hidden mdx:inline">{prev?.name ?? "prev"}</span>
+            <img className="w-[23px] h-[23px] mt-0.5" src={prev?.favicon}></img>
+          </div>
         </a>
         <a
-          className="font-mono mdx:text-3xl text-center"
+          className="font-mono mdx:text-2xl font-bold text-center"
           href="https://webring.otomir23.me/"
         >
-          {" "}
           Otoring
         </a>
         <a
@@ -79,7 +82,11 @@ export const Webring = ({ prev, next }: entryProps) => {
           className="flex-1 font-mono text-neutral-300 text-end truncate"
           href={next?.url ?? "https://webring.otomir23.me/30/next"}
         >
-          <span className="hidden mdx:inline">{next?.name ?? "next"} </span>&gt;
+          <div className="flex gap-1 flex-row items-center justify-end">
+            <img className="w-[23px] h-[23px] mt-0.5" src={next?.favicon}></img>
+            <span className="hidden mdx:inline">{next?.name ?? "next"}</span>
+            <span>&gt;</span>
+          </div>
         </a>
       </div>
       <div

@@ -5,7 +5,9 @@ import { Webring } from "../../components/widgets/react/Webring";
 interface WebringEntry {
     name: string;
     url: string;
+    favicon: string;
 }
+
 interface WebringDataResponse {
     prev: WebringEntry | null;
     next: WebringEntry | null;
@@ -20,6 +22,10 @@ const BASE_URL =
     import.meta.env.WEBRING_BASE_URL ||
     "https://webring.otomir23.me/";
 
+function faviconURL(favicon: string) {
+    return BASE_URL + "/media/" + favicon;
+}
+
 try {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 1500);
@@ -30,6 +36,10 @@ try {
 
     if (res.ok) {
         webringData = await res.json();
+        if (webringData.prev)
+            webringData.prev.favicon = faviconURL(webringData.prev.favicon);
+        if (webringData.next)
+            webringData.next.favicon = faviconURL(webringData.next.favicon);
     }
 } catch (e) {
     console.error("Webring fetch timed out or failed:", e);
@@ -52,7 +62,7 @@ try {
             id="webring"
             class={"justify-center items-center " +
                 "flex bg-black outline-1 outline-neutral-300 rounded-full w-full max-w-[calc(100%-10px)] " +
-                "text-[20px] mdx:w-xl p-5 mdx:text-2xl h-12 mdx:h-15"}
+                "text-[15px] mdx:w-xl p-5 mdx:text-xl lgx:text-2xl h-12 mdx:h-15"}
         >
             <a
                 id="prevurl"
@@ -60,16 +70,21 @@ try {
                 href={webringData.prev?.url ??
                     "https://webring.otomir23.me/30/prev"}
             >
-                &lt;{" "}
-                <span class="hidden mdx:inline"
-                    >{webringData.prev?.name || "prev"}
-                </span>
+                <div class="flex gap-1 flex-row items-center">
+                    <span>&lt;</span>
+                    <span class="hidden mdx:inline"
+                        >{webringData.prev?.name ?? "prev"}</span
+                    >
+                    <img
+                        class="w-[23px] h-[23px] mt-0.5"
+                        src={webringData.prev?.favicon}
+                    />
+                </div>
             </a>
             <a
-                class="font-mono mdx:text-3xl text-center"
+                class="font-mono mdx:text-2xl font-bold text-center"
                 href="https://webring.otomir23.me/"
             >
-                {" "}
                 Otoring
             </a>
             <a
@@ -78,13 +93,21 @@ try {
                 href={webringData.next?.url ??
                     "https://webring.otomir23.me/30/next"}
             >
-                <span class="hidden mdx:inline"
-                    >{webringData.next?.name ?? "next"}
-                </span>&gt;
+                <div class="flex gap-1 flex-row items-center justify-end">
+                    <img
+                        class="w-[23px] h-[23px] mt-0.5"
+                        src={webringData.next?.favicon}
+                    />
+                    <span class="hidden mdx:inline"
+                        >{webringData.next?.name ?? "next"}</span
+                    >
+                    <span>&gt;</span>
+                </div>
             </a>
         </div>
     </div>
 </noscript>
+
 <div class="webring-interactive">
     <Webring client:load prev={webringData.prev} next={webringData.next} />
 </div>
