@@ -121,7 +121,7 @@ export const Chuvirla = () => {
     >
       <ModelErrorBoundary fallback={<Placeholder />}>
         <Suspense fallback={<Placeholder />}>
-          <Canvas camera={{ position: [0, -0.1, 3.0], fov: 40 }}>
+          <Canvas camera={{ position: [0, -0.1, 3.2], fov: 40 }}>
             <hemisphereLight
               args={[0xffffff, 0x080820, 2]}
               position={[0, 3, 3]}
