@@ -23,7 +23,7 @@ mdx:flex-row pb-8 -mt-15 mdx:mt-0 mdx:pb-10 gap-2 mdx:gap-8 px-5 py-5 mdx:pt-8 m
 >
     <div
         style={{ backgroundImage: `url(${frame.src})` }}
-        class="ring-1 ring-white shadow-xl shadow-neutral-100/20 rounded-full"
+        class="ring-1 ring-white shadow-xl shadow-neutral-100/20 rounded-full object-contain"
     >
         <noscript>
             <style>
@@ -32,7 +32,7 @@ mdx:flex-row pb-8 -mt-15 mdx:mt-0 mdx:pb-10 gap-2 mdx:gap-8 px-5 py-5 mdx:pt-8 m
                 }
             </style>
             <div
-                class="flex justify-center items-center aspect-square h-100 mdx:h-110 shrink-0 -m-5"
+                class="flex justify-center items-center aspect-square mdx:h-110 shrink-0 w-full max-w-[350px] h-auto mx-auto"
                 id="glutesha"
             >
                 <Image
