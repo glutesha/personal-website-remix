@@ -7,9 +7,9 @@ import Card from "../../layouts/Card.astro";
 import Diamond from "../../assets/images/vector/diamond.svg";
 
 const staticBadges = Object.values(
-    import.meta.glob("/public/badges/*.{png,jpg,gif}", {
+    import.meta.glob<ImageMetadata>("/public/badges/*.{png,jpg,gif}", {
         eager: true,
-        as: "url",
+        import: "default",
     }),
 );
 
@@ -109,32 +109,28 @@ const interactiveBadges = [
         style="image-rendering: pixelated;"
         slot="content"
     >
-        {
-            interactiveBadges.map((b) => (
-                <a href={b.href} target="_blank" rel="noopener noreferrer">
-                    <Image
-                        width={88}
-                        height={33}
-                        loading="lazy"
-                        class="badge"
-                        src={b.src}
-                        alt={b.alt}
-                    />
-                </a>
-            ))
-        }
-
-        {
-            staticBadges.map((src) => (
+        {interactiveBadges.map((b) => (
+            <a href={b.href} target="_blank" rel="noopener noreferrer">
                 <Image
                     width={88}
                     height={33}
                     loading="lazy"
                     class="badge"
-                    src={src}
-                    alt="badge"
+                    src={b.src}
+                    alt={b.alt}
                 />
-            ))
-        }
+            </a>
+        ))}
+
+        {staticBadges.map((src) => (
+            <Image
+                width={88}
+                height={33}
+                loading="lazy"
+                class="badge"
+                src={src}
+                alt="badge"
+            />
+        ))}
     </div>
 </Card>
