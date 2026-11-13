@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-declare global {
+declare module "react" {
   namespace JSX {
     interface IntrinsicElements {
       "pagering-link": React.HTMLAttributes<HTMLElement> & {

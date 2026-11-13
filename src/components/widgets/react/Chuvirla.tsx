@@ -8,7 +8,7 @@ import type { GLTF } from "three-stdlib";
 import avatar_transparent from "../../../assets/images/avatar_transparent.png";
 
 class ModelErrorBoundary extends React.Component<
-  { fallback: React.ReactNode },
+  { fallback: React.ReactNode; children: React.ReactNode },
   { hasError: boolean }
 > {
   state = { hasError: false };
